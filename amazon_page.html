@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .a-cardui-header {
+            margin-bottom: 10px;
+        }
+
+        .a-cardui-header h1 {
+            max-height: 54.6px;
+            font-size: 21px !important;
+            line-height: 27.3px !important;
+        }
+
+        .mainContainer {
+            /*border: 1px solid gray;*/
+            background: #E3E6E6;
+            margin: 0 auto;
+            width: 1330px;
+        }
+
+        .container1,
+        .container2,
+        .container3,
+        .container4 {
+            min-height: 400px;
+            padding: 0px 10px 0px 10px;
+            /* padding: 10px 10px 10px 10px;*/
+            display: inline-block;
+            /*border: 1px solid gray;*/
+            max-width: 307px;
+            vertical-align: top;
+        }
+
+        body {
+            font-family: "Amazon Ember", Arial, sans-serif;
+        }
+
+        .mainContainer h2 {
+            font-size: 21px !important;
+            line-height: 27.3px !important;
+        }
+
+        .quadrant-container {
+            display: inline-block;
+            height: 100%;
+            margin: 0;
+            padding: 0 0 20px;
+            width: 47.5%;
+        }
+
+        .quadrant-containe-sp {
+            width: 100%;
+            padding-bottom: 15px;
+        }
+
+        img {
+            max-width: 96%;
+        }
+
+        .grid-row-1,
+        .grid-row-2 {
+            height: 50%;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .insideconteiner {
+            background-color: #fff;
+            padding-left: 15px;
+            min-height: 365px
+        }
+
+        .titleitem {
+            font-family: "Amazon Ember", Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        .a-cardui-footer {
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 13px !important;
+            line-height: 19px !important;
+        }
+
+        .a-cardui-footer a,
+        .a-cardui-footer a:link,
+        a:visited {
+            text-decoration: none;
+            color: #007185;
+        }
+
+        .a-cardui-body-sp {
+            padding: 0 20px 30px 0px;
+            margin-bottom: 0;
+        }
+
+        .a-button-primary {
+            background: #FFD814;
+            border-color: #FCD200;
+            width: 100% !important;
+            border-style: solid;
+            border-width: 1px;
+            cursor: pointer;
+            display: inline-block;
+            padding: 0;
+            text-align: center;
+            text-decoration: none !important;
+            vertical-align: middle;
+            margin-top: 4px !important;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px 0 rgba(213, 217, 217, .5);
+            width: 100%;
+        }
+
+        .a-button-inner {
+            border-radius: 7px;
+            background: 0 0;
+            box-shadow: none;
+            display: block;
+            overflow: hidden;
+            height: 30px;
+        }
+
+        .a-button-text {
+            background-color: transparent;
+            border: 0;
+            display: block;
+            font-size: 13px;
+            line-height: 29px;
+            margin: 0;
+            outline: 0;
+            padding: 0 10px 0 11px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .a-button-text:link,
+        .a-button-text:visited {
+            text-decoration: none;
+            color: #0F1111;
+        }
+        .mainnav {
+            display: flex;
+            flex-flow: row nowrap;
+            background-image: none;
+            background-color: #232f3e;
+            padding-left: 11px;
+            padding-top: 0px;
+            min-height: 39px;
+            font-family: "Amazon Ember", Arial, sans-serif;
+        }
+        .firstsec {
+            margin-right: 0;
+            display: flex;
+            position: static;
+            float: none;
+            width: auto;
+        }
+        .firstsec a {
+            display: flex;
+            position: static;
+            float: none;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border: none;
+            text-decoration: none;
+            padding: 8px 9px 8px 9px;
+            margin: 0;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 3px;
+        }
+        .icon-label {
+            color: #fff;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 14px;
+            padding-left: 5px;
+            white-space: nowrap;
+        }
+        .centersec {
+            display: flex;
+            position: static;
+            float: none;
+            width: auto;
+            overflow: hidden;
+            white-space: nowrap;
+            min-width: 65%;
+        }
+        .centersec a {
+            margin: 5px 0 6px 0;
+            padding: 8px 9px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+        .imglogo {
+            background: url(./images/sprite_logo.png) no-repeat;
+
+            background-position: 0px 0px;
+             width: 162px;
+              height: 38px;
+}
+.topmainnav{
+    background-color: #131921;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="topmainnav">
+        <div class="topsubnav">
+          <!--  <a href="#" class="nav-a "><div class="imglogo"></div></a>-->
+<img href="#" src="./images/amzonandall.png">
+        </div>
+
+    </div>
+    <div class="mainnav">
+        <div class="firstsec">
+            <a><i class="fa fa-navicon"></i>
+                <span class="icon-label">All</span>
+            </a>
+        </div>
+        <div class="centersec">
+            <a href="#" class="nav-a ">Amazon miniTV</a>
+            <a href="#" class="nav-a ">Best sellers</a>
+            <a href="#" class="nav-a ">Mobiles</a>
+            <a href="#" class="nav-a ">Customer services</a>
+            <a href="#" class="nav-a ">Today's Deals</a>
+            <a href="#" class="nav-a ">Electronics</a>
+            <a href="#" class="nav-a ">Prime</a>
+            <a href="#" class="nav-a ">Amazon pay</a>
+        </div>
+        <div class="rightnav">
+            <a class="">
+                <img class="landscape-image" src="./images/shopping.jpg" class="">
+            </a>
+        </div>
+    </div>
+    <div style="width:104.2%;height: 380px;">
+        <img src="./images/amazonslider.jpg" class="" style="width:100%;">
+    </div>
+    <div class="mainContainer">
+        <div class="container1">
+            <div class="insideconteiner">
+                <div class="a-cardui-header">
+                    <h2 class="">Up to 60% off | Home décor picks from local shops</h2>
+                </div>
+                <div class="grid-row-1">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/bag.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Bags</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/measurM.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Electric appliances</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-row-2">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/nightlamp.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">home decoration</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/wallpiece.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Glassware</span></div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer"><a class="a-link-normal" href="#">Explore all</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="insideconteiner">
+                <div class="a-cardui-header">
+                    <h2 class="">Up to 50% off | International brands</h2>
+                </div>
+                <div class="grid-row-1">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/shoe.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">personal collections</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/shoekeep.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">office collections</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-row-2">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/pillow.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Microwaves</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/Rim_tyrecare.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Glasswares</span></div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer"><a class="a-link-normal" href="#">See more</a></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="insideconteiner">
+
+                <div class="a-cardui-header">
+                    <h2 class="">Bluetooth Calling Smartwatch starts at ₹1,999</h2>
+                </div>
+                <div class="grid-row">
+                    <div class="quadrant-containe-sp">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/smartwatch.jpg" class="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer"><a class="a-link-normal" href="#">See more</a></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container4">
+            <div class="insideconteiner">
+
+                <div class="a-cardui-header">
+                    <h2 class="">Sign in for your best experience</h2>
+                </div>
+                <div class="grid-row-1">
+                    <div class="a-cardui-body-sp">
+                        <span id="" class="a-button-primary">
+                            <span class="a-button-inner">
+                                <a href="" class="a-button-text">Sign in securely</a>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="grid-row-sign">
+                        <div class="quadrant-containe-sign">
+                            <a class="image-redirect">
+                                <div class=""><img class="landscape-image" src="./images/clearance.jpg" class="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainContainer">
+        <div class="container1">
+            <div class="insideconteiner">
+                <div class="a-cardui-header">
+                    <h2 class="">Home appliances | Up to 50% off</h2>
+                </div>
+                <div class="grid-row-1">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/Appliances-QC.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/Appliances-QC-PC2.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Refrigerators</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-row-2">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/Appliances-QC-PC3.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Microwaves</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/Glasscare.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Glassware</span></div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer"><a class="a-link-normal" href="#">Explore all</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="insideconteiner">
+                <div class="a-cardui-header">
+                    <h2 class="">Up to 70% off | Clearance store</h2>
+                </div>
+                <div class="grid-row-1">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/WF1.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/WF2.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Refrigerators</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-row-2">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/WF3.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Microwaves</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/WF4.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Glasswares</span></div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer"><a class="a-link-normal" href="#">See more</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="insideconteiner">
+                <div class="a-cardui-header">
+                    <h2 class="">Automotive essentials | Up to 60% off</h2>
+                </div>
+                <div class="grid-row-1">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/vaccum.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/Washingm.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-row-2">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/tshirt.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/wallpiece.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer"><a class="a-link-normal" href="#">See more</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container4">
+            <div class="insideconteiner">
+                <div class="a-cardui-header">
+                    <h2 class="">Upgrade your home | Amazon Brands & more</h2>
+                </div>
+                <div class="grid-row-1">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/taperingm.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/tissuep.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-row-2">
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/vega_helmet.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                    <div class="quadrant-container">
+                        <a class="image-redirect">
+                            <div class=""><img class="landscape-image" src="./images/watch.jpg" class="">
+                            </div>
+                            <div class="titleitem"><span class="">Air conditioners</span></div>
+                        </a>
+                    </div>
+                    <div class="a-cardui-footer"><a class="a-link-normal" href="#">See more</a></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

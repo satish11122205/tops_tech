@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+        }
+        .box{
+            
+            /* margin: 10px; */
+
+        }
+        .conteiner{
+            height: 1300px;
+            display: grid;
+            row-gap: 20PX;
+            column-gap: 20PX;
+            /* grid-template-rows: 150PX 150PX 150PX;
+            grid-template-columns: 150PX 150PX 150PX; */
+            /* grid-template-rows: repeat(3 ,1fr);
+            grid-template-columns: repeat(3,1fr); */
+            grid-template-rows:1fr 1fr 1fr ;
+            grid-template-columns: 1fr 1fr 1fr ;
+        }
+        #item1{
+            color: white;
+            font-size: 50px;
+            text-align: center;
+          
+
+        }
+        #item2{
+           
+        }
+        #iteem3{
+            grid-row-start: 2;
+           grid-row-end: 4;
+
+        }
+        #iteem4{
+            grid-column-start: 2;
+           grid-column-end: 4;
+
+        }
+       
+        #footer{
+            
+
+        }
+        img{
+            object-fit: cover;
+             width: 100%
+        }
+    </style>
+</head>
+<body>
+
+
+    <section>
+        <div class="conteiner">
+            <div class="box" id="item1"><a href="#"><img src="./images/p1.jpg"></a></div>
+            <div class="box" id="item2"><a href="#"><img src="./images/p2.jpg"></a></div>
+            <div class="box" id="iteem3"><a href="#"><img src="./images/p4.jpg"></a></div>
+            <div class="box" id="iteem4"><a href="#"><img src="./images/p4.jpg"></a></div>
+            <div class="box"><a href="#"><img src="./images/p5.jpg"></a></div>
+            <div class="box" id="footer"><a href="#"><img src="./images/p6.jpg"></a></div>
+            <div class="box"><a href="#"><img src="./images/p2.jpg"></a></div>
+            <div class="box"><a href="#"><img src="./images/p4.jpg"></a></div>
+
+        </div>
+    </section>
+    
+
+</body>
+</html>
