@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .col-15 {
+            width: 15%;
+        }
+
+        .col-70 {
+            width: 70%;
+        }
+
+        .col-50 {
+            width: 50%;
+        }
+
+        .col-25 {
+            width: 25%;
+        }
+
+        .col-30 {
+            width: 30%;
+        }
+
+        .col-35 {
+            width: 35%;
+        }
+
+        .align_c {
+            text-align: center;
+        }
+
+        .align_l {
+            text-align: left;
+        }
+
+        img {}
+
+        .jcs {
+            justify-content: center;
+        }
+
+        .align_item {
+            align-items: center;
+
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            margin: 0 auto;
+        }
+
+        header {
+            margin: 0 auto;
+            background-color: #efc964;
+        }
+
+        .main_p1 {
+            background-color: #bbd1d2;
+        }
+
+        .ecommerce {
+
+            width: 100%;
+
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 20px 20px 20px 20px;
+        }
+
+        li {
+            display: inline-block;
+            padding: 15px 15px 15px 15px;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: "Poppins";
+        }
+
+        .logo img {
+            width: 55%;
+            vertical-align: middle;
+
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .ecom img {
+            width: 40%;
+        }
+
+        .btn img {
+            width: 100%;
+
+        }
+
+        form input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: none;
+        }
+
+        form button {
+            float: left;
+            width: 12%;
+            padding: 10px;
+            background-color: white;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .example {
+            display: inline-block;
+        }
+
+        .logo_search {
+            margin: 0px 20px 0px 70px;
+        }
+
+        .bg_img {
+            background-image: url(./image/e4.png);
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            background-size: contain;
+            position: relative;
+        }
+
+        .imgtext {
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+            bottom: 0;
+            width: 60%;
+
+        }
+
+        .imgtext1 {
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+            bottom: 56px;
+            right: 20px;
+            font-size: 30px;
+
+        }
+
+        .imgtext2 {
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+            bottom: 36px;
+            right: 20px;
+            font-size: 20px;
+        }
+
+        .imgtext3 {
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .imgtext4 {
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+            bottom: 0px;
+            right: 20px;
+        }
+
+        .imgtext1 img,
+        .imgtext2 img,
+        .imgtext3 img,
+        .imgtext4 img {
+            width: 15px;
+        }
+
+        .text_sec {
+            margin: 30px;
+        }
+
+        .round_card img {
+            width: 65%;
+        }
+
+        .text_sec h1 {
+            font-size: 50px;
+            padding-bottom: 10px;
+
+        }
+
+        .text_sec h3 {
+            font-size: 30px;
+            padding-bottom: 30px;
+        }
+
+        .button_1 {
+            margin: 20px 0px 30px 0px;
+            line-height: 40px;
+        }
+
+        .img_margin {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="ecommerce">
+        <header>
+            <div class="container">
+                <nav class="row jcs align_item">
+                    <div class="col-35 logo_search">
+                        <div class="logo col-15"><img src="image/e1.png" /></div>
+                        <form class="example col-70" action="/action_page.php">
+                            <button class="btn" type="submit"><img src="image/e2.png" /></button>
+
+                            <input type="text" name="search">
+                        </form>
+                    </div>
+                    <div class="links col-50">
+                        <ul>
+                            <li><a>Home</a></li>
+                            <li><a>Product</a></li>
+                            <li><a>Promo</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="ecom"><img src="./image/e3.png" /></div>
+                </nav>
+
+            </div>
+        </header>
+        <div class="main_sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-50 main_p1">
+                        <div class="text_sec">
+                            <h1>Ecommerce</h1>
+                            <h3>Chose the product for you</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique obcaecati est impedit
+                                earum qui! Sapiente praesentium temporibus voluptatibus, ex minus ipsam fugit facere
+                                dignissimos natus incidunt error porro, accusamus necessitatibus?</p>
+                        </div>
+                        <div class="round_card row jcs">
+                            <div class="col-20 align_c">
+                                <div><img src="./image/e5.png"></div>
+
+                            </div>
+                            <div class="col-20 align_c">
+                                <div><img src="./image/e6.png"></div>
+
+                            </div>
+                            <div class="col-20 align_c">
+                                <div><img src="./image/e7.png"></div>
+
+                            </div>
+                            <div class="col-20 align_c">
+                                <div><img src="./image/e8.png"></div>
+
+                            </div>
+
+                        </div>
+                        <div class="button_1">
+                            <div class="align_c">
+                                <button>see more</button>
+                            </div>
+                            <div class="align_c">
+                                <button>Buy now</button>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+                    <div class="col-50 img_margin">
+                        <div class="bg_img">
+                            <div class="imgtext">
+                                <h3>descriptions</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quasi quae eius
+                                    maiores corrupti, deserunt voluptates eum illo accusamus exercitationem rerum velit
+                                    blanditiis enim sapiente error temporibus eos quaerat repellat.</p>
+                            </div>
+                            <div class="imgtext1">
+                                <p>$150.23</p>
+                            </div>
+                            <div class="imgtext2">
+                                <p>3*$53.55</p>
+                            </div>
+                            <div class="imgtext3"><span>av.san matin croba</span><img src="./image/e9.png" /></div>
+                            <div class="imgtext4"><span>5 businees days</span><img src="./image/e10.png" /></div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
