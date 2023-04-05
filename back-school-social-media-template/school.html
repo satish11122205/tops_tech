@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .row {
+            display: flex;
+        }
+        .col-15 {
+            width: 15%;
+        }
+        .col-70 {
+            width: 70%;
+        }
+        .col-50 {
+            width: 50%;
+        }
+        .col-25 {
+            width: 25%;
+        }
+        .col-30 {
+            width: 30%;
+        }
+        .col-35 {
+            width: 35%;
+        }
+        .align_c {
+            text-align: center;
+        }
+        .align_l {
+            text-align: left;
+        }
+        .jcs {
+            justify-content: space-between;
+        }
+        .align_item {
+            align-items: center;
+        }
+        .school {
+            border: 1px solid green;
+        }
+        .container {
+            margin: 0 auto;
+        }
+        .school {
+            background-color: #f0b52b;
+        }
+        header {
+            background-color: #290ab4;
+        }
+        li {
+            display: inline-block;
+            padding: 15px 15px 15px 15px;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: "Poppins";
+        }
+        .logo img {
+            width: 55%;
+            vertical-align: middle;
+        }
+        .logo {
+            display: inline-block;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .page_one {
+            margin: 0px 50px 0px 50px;
+        }
+        .page_one_m {
+            margin: 50px 50px 0px 50px;
+        }
+        .page_one_m_2 img {
+            width: 100%;
+        }
+        .two_sec {
+            background-image:
+                linear-gradient(to left, rgba(21, 133, 237, 0.53), rgba(21, 53, 237, 0.73)),
+                url(./image/letsgo.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .two_sec_text {
+            margin: 0 auto;
+            text-align: center;
+            padding: 100px 0px 100px 0px;
+            font-size: 30px;
+            color: #fff;
+        }
+        .btn {
+            width: 246px;
+            height: 50px;
+            border-radius: 34px;
+            background-color: #c8206a;
+            margin-top: 30px;
+        }
+        .sec_3 {
+            background-color: #f0b52b;
+        }
+        .sec_3_img {
+            margin: 100px 50px 100px 50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="school">
+        <header>
+            <div class="container">
+                <nav class="row jcs align_item page_one">
+                    <div class=logo_search">
+                        <div class="logo"><a href="#"><img src="image/s1.png" /></a></div>
+
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="ecom">
+                        <a href=""><img src="./image/s2.png" /></a>
+                        <a href=""><img src="./image/s3.png" /></a>
+                        <a href=""><img src="./image/s4.png" /></a>
+                        <a href=""><img src="./image/s3.png" /></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="row jcs align_item page_one_m">
+            <div class="col-50">
+                <div><img src="./image/s8.png" /></div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus expedita magnam inventore
+                        eligendi deleniti itaque veniam iusto
+                        mollitia quo non maxime, ullam fugiat autem tempora assumenda ratione asperiores id doloribus.
+                    </p>
+                </div>
+            </div>
+            <div class="col-50">
+                <div class="page_one_m_2"><img src="./image/s7.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="two_sec">
+        <div class="container">
+
+            <div class="col-70 two_sec_text">
+                <img src="./image/s5.png" />
+                <p>Time to Knowledge</p>
+                <button class="btn">Learn now</button>
+            </div>
+        </div>
+    </section>
+    <section class="sec_3">
+        <div class="container">
+            <div class="row align_c jcs">
+                <div class="col-50 sec_3_img"><img src="./image/rec.png" /></div>
+                <div class="col-50 sec_3_img">
+                    <img src="./image/b1.png" />
+                    <img src="./image/b2.png" />
+                    <img src="./image/b3.png" />
+                    <img src="./image/b4.png" />
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
