@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td> <label for="username">User name</label> </td>
+                <td><input type="text" name="username" onblur="checkreq(this)" id="username" required>
+
+                </td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="text" name="password" onblur="checkreq(this)" id="password" required>
+
+                </td>
+            </tr>
+            <tr>
+                <td>confirm password</td>
+                <td><input type="text" name="cpassword" onblur="checkreq(this)" id="cpassword" required></td>
+            </tr>
+
+            <tr>
+                <td>email</td>
+                <td><input type="text" name="email" id="email" required onblur="checkreq(this)"></td>
+            </tr>
+            <tr>
+                <td>mobile</td>
+                <td><input type="text" name="mobile" onblur="checkreq(this)" id="mobile" required pattern="[0-9]+"
+                        minlength="10" maxlength="10" title="please enter number only"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="btn" id="btn"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function checkreq(kaipan) {
+            let SpanTag = document.createElement('span');
+            SpanTag.id = kaipan.id + '_error';
+           // SpanTag.setAttribute("id", kaipan.id + '_error');
+            let x = document.getElementById(SpanTag.id);
+            let inputdata = kaipan.value
+            if (inputdata == "") {
+             if (x == null) {
+                    kaipan.insertAdjacentElement("afterend", SpanTag);
+                    document.getElementById(SpanTag.id).innerHTML = "this field is required";
+                    kaipan.style.borderColor = "#e74c3c";
+                    return false;
+                }
+               document.getElementById(SpanTag.id).innerHTML = "this  is required";
+               kaipan.style.borderColor = "#e74c3c";
+               return false;
+            }
+            else {
+                document.getElementById(SpanTag.id).innerHTML = "";
+                kaipan.style.borderColor = "black";
+                return true;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        <title></title>
+</head>
+
+<body>
+    <button onclick="print_rectangle()">submit</button>
+    <script>
+        let array = [1, 2, 3, 4, 5];
+         for (let i = 0; i < array.length; i++)
+          { 
+            console.log(array[i]); 
+        }
+
+        let array_1 = [10, 20, 30, 40, 50];
+         array_1. forEach((element) => { 
+            console. log(element); 
+        });
+       let cars = ["BMW", "Volvo", "Saab", "Ford"];
+       for (let i = 0; i < cars.length; i++)
+          { 
+            console.log(cars[i]); 
+            document.write(cars[i] + "<br/>")
+        }
+
+        let cars_electric = ["tesla", "byd", "GM", "Ford"];
+        cars_electric. forEach((i) => { 
+            console. log(i); 
+            document.write([i] + "<br/>")
+
+        });
+       
+        function testing() {
+            console.log("called");
+            return "something"
+        }
+        // console.log(testing);
+        console.log(testing());
+        console.log("called");
+        //alert("Login success");
+       // confirm("Are you sure??")
+       // prompt("Addition of 2+2 = ")
+       let n = 6;
+       let m = 20;
+       function print_rectangle() 
+      {
+       
+        for (let i = 1; i <= n; i++)
+        {
+          for (let j = 1; j <= m; j++) 
+          {
+            if (i == 1 || i == n || j == 1 || j == m) 
+                 document.write("*");
+            else 
+                document.write("&nbsp;&nbsp;");
+          }
+          document.write("<br>");
+        }
+      }
+  
+      // Driver Code
+     
+        
+</script>
+
+</html>

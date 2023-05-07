@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" id="Form">
+        <table>
+            <tr>
+                <td><label for="username">username</label></td>
+                <td><input type="text" name="text" id="username" onblur="validate(this,'user_error')">
+                    <span id="user_error"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="password">password</label></td>
+                <td><input type="tel" name="txt" id="password" onblur="validate(this,'pass_error')">
+                    <span id="pass_error"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="cpassword">confirm password</label></td>
+                <td><input type="tel" name="txt" id="cpassword" onblur="validate(this,'cpass_error')">
+                    <span id="cpass_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="email" onblur="validate(this,'email_error')">
+                    <span id="email_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>mobile</td>
+                <td><input type="text" name="mobile" onblur="validate(this,'mobile_error')" id="mobile" required
+                        minlength="10" maxlength="10" title="please enter number only">
+                    <span id="mobile_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="submit" id="btn">
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+    <script>
+
+        function validate(eachinput, eacherror) {
+            console.log(eachinput);
+            if (eachinput.value === "") {
+                document.getElementById(eacherror).innerHTML = "This field is required"
+
+            } else {
+                document.getElementById(eacherror).innerHTML = ""
+                if (eachinput.type == "email") {
+                    console.log("this is an email type");
+
+                    if (eachinput.value.indexOf("@") != -1 && eachinput.value.indexOf(".") != -1) {
+                        //green border
+                        eachinput.style.borderColor = "#2ecc71";
+                    } else {
+                        //red border
+                        eachinput.style.borderColor = "#e74c3c";
+                        document.getElementById(eacherror).innerHTML = "*invalid email type"
+
+                    }
+
+                }
+                let pass = document.getElementById('password').value;
+                let confirm_pass = document.getElementById('cpassword').value;
+                if (pass != confirm_pass) {
+                    document.getElementById('cpassword').style.color = 'red';
+                    document.getElementById('cpass_error').innerHTML
+                        = 'Use same password';
+
+                } else {
+                    document.getElementById('cpassword').style.color = 'black';
+                    document.getElementById('cpass_error').innerHTML =
+                        'Password Matched';
+
+                }
+                let mobil = document.getElementById('mobile').value;
+                let reg_mobile= /^\d{10}$/;
+
+                if (reg_mobile.test(mobil)) {
+                    document.getElementById('mobile').style.color = 'black';
+                    // value is ok, use it
+                } else {
+                    document.getElementById('mobile').style.color = 'red';
+                    document.getElementById('mobile_error').innerHTML = "Invalid number; must be ten digits"
+                    mobile.focus()
+                    return false
+                }
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
