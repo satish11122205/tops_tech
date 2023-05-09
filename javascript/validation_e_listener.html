@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td> <label for="username">User name</label> </td>
+                <td><input type="text" class="thisrequired" name="username" id="username" required></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type="text" class="thisrequired" name="password" id="password" required></td>
+            </tr>
+            <tr>
+                <td>confirm password</td>
+                <td><input type="text" class="thisrequired" name="cpassword" id="cpassword" required></td>
+            </tr>
+            <tr>
+                <td>new field</td>
+                <td><input type="text" class="thisrequired" name="nfield" id="nfield" required></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type="text" class="thisrequired" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td>mobile</td>
+                <td><input type="text" class="thisrequired" name="mobile" id="mobile" required pattern="[0-9]+"
+                        minlength="10" maxlength="10" title="please enter number only"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" name="btn" id="btn"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        let input_class = document.getElementsByClassName('thisrequired');
+        let txt = document.createElement("SPAN");
+        txt.innerHTML = "this field is required";
+
+        for (let i in input_class) {
+            //let e=input_class[i].value;
+            console.log(input_class[i]);
+            input_class[i].onblur = function () {
+                console.log(input_class[i], "which input");
+                console.log(input_class[i].value, "input value of that");
+                
+                showComment(input_class[i].value, input_class[i]);
+            }
+        }
+        function showComment(y, z) {
+            let txt = document.createElement("SPAN");
+            txt.innerHTML = "this field is required";
+            if (y == "") {
+                if (z.nextSibling == null) {
+                    z.parentNode.appendChild(txt);
+                }
+            } else {
+                if (z.nextSibling != null) {
+                    if (z.nextSibling.nodeName == "SPAN") {
+                        z.nextSibling.remove()
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
