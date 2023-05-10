@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <form method="post" id="Form">
+        <table>
+            <tr>
+                <td><label for="username">username</label></td>
+                <td><input type="text" name="text" id="username" onblur="validateInput(this,'usrerror')">
+                    <span id="usrerror"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="password">password</label></td>
+                <td><input type="tel" name="txt" id="password" onblur="validateInput(this,'passworderror')">
+                    <span id="passworderror"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label for="cpassword">confirm password</label></td>
+                <td><input type="tel" name="txt" id="cpassword" onblur="validateInput(this,'cpassworderror')">
+                    <span id="cpassworderror"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="email" onblur="validateInput(this,'emailerror')">
+                    <span id="emailerror"></span>
+                </td>
+            </tr>
+           
+            <tr>
+                <td>
+                    <input type="submit" value="submit" id="btn">
+                </td>
+            </tr>
+
+            <script>
+            
+                function validateInput(current_input, current_error_status) {
+                    console.log(current_input);
+                    if (current_input.value === "") {
+                        document.getElementById(current_error_status).innerHTML = "* Data Mandatory"
+                    } else {
+                        document.getElementById(current_error_status).innerHTML = ""
+
+                    }
+                }
+
+            </script>
+        </table>
+    </form>
+
+
+</body>
+
+</html>

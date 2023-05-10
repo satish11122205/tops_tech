@@ -41,11 +41,7 @@
     </form>
     <script>
         let input_class = document.getElementsByClassName('thisrequired');
-        let txt = document.createElement("SPAN");
-        txt.innerHTML = "this field is required";
-
         for (let i in input_class) {
-            //let e=input_class[i].value;
             console.log(input_class[i]);
             input_class[i].onblur = function () {
                 console.log(input_class[i], "which input");
