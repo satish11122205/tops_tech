@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins";
+        }
+        .maindiv {
+            margin: 40px auto;
+            width: 30%;
+            background-color: black;
+            padding: 20px
+        }
+        ul {
+            background-color: rgb(170, 168, 168);
+        }
+        .ul_div {
+            margin: 20px 0px;
+        }
+        .ul_div li {
+            padding: 5px 5px 5px 5px;
+        }
+        .btn {
+            background-color: #89330a;
+            padding: 7px 30px;
+        }
+        input {
+            padding: 7px;
+            width: 70%;
+        }
+        .search {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body onload="checkCookie()">
+    <section class="assessment">
+            <div class="maindiv">
+                <div class="search">
+                    <input type="text" name="search" class="inputSearch">
+                    <button class="btn" type="button" class="searchBtn" onclick="binddata()">add</button>
+                </div>
+                <div class="ul_div">
+                    <ul id="appenddom">
+                        <li>Read a book</li>
+                        <hr>
+                        <li>Lunch with Caro</li>
+                        <hr>
+                        <li>fedd the dog</li>
+                        <hr>
+                    </ul>
+                </div>
+         </div>
+    </section>
+    <script>
+        function binddata() {
+            var ul = document.getElementById('appenddom');
+            let input = document.querySelector(".inputSearch").value;
+            var hr = document.createElement('hr');// make a hr
+
+            if (input !== "") {
+                var li = document.createElement('li');
+                li.appendChild(document.createTextNode(input));
+                ul.appendChild(li);
+                ul.appendChild(hr);
+
+            } else {
+
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
