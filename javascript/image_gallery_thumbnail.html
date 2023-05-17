@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: #ebebeb;
+}
+
+.container {
+  margin: 0 auto;
+  width: 900px;
+  padding: 4rem 0;
+}
+
+.gallery {
+		display: grid;
+		grid-template-columns: 1fr min-content 1fr;
+		justify-content: center;
+		justify-items: center;
+		grid-gap: .5rem;
+	}
+  
+.slides {
+  overflow: hidden;
+  width: 100%;
+  height: 30rem;
+  position: relative;
+
+  grid-column: 1/4;
+
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  list-style-type: none;
+}
+  .slides li {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+
+ .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+  }
+
+  
+.slides li.active {
+  z-index: 3;
+}
+
+.slides li:not(.active) {
+  z-index: 0;
+}
+
+.thumbnails {
+  grid-column: 2 / 3;
+
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  line-height: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+  .thumbnails img {
+    width: 6rem;
+    height: 6rem;
+    z-index: 10;
+    object-fit: cover;
+    object-position: center;
+  }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container__info">
+          <h2 class="heading-3 heading-2--dark">Gallery</h2>
+          <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur tenetur incidunt accusantium, recusandae explicabo nostrum magni ratione quas aliquam eos accusamus non suscipit a beatae animi nemo, adipisci modi natus.</p>
+        </div>
+      
+        <!-- Gallery -->
+        <div class="gallery">
+          <ul class="slides">
+            <li id="slide1"><img src="../images/p1.jpg" alt=""/></li>
+            <li id="slide2"><img src="../images/p2.jpg" alt=""/></li>
+            <li id="slide3"><img src="../images/p3.jpg" alt=""/></li>
+          </ul>
+          <ul class="thumbnails">
+          <li>
+            <a href="#slide1" onclick='navigate(event)'><img src="../images/p1.jpg"/>
+            </a>
+          </li>
+          <li>
+            <a href="#slide2" onclick='navigate(event)'><img src="../images/p2.jpg"/>
+            </a>
+          </li>
+          <li>
+            <a href="#slide3" onclick='navigate(event)'><img src="../images/p3.jpg"/>
+            </a>
+          </li>
+        </ul>
+       </div>
+      </div>
+      
+      
+    <script>
+        const navigate = (event) => {
+  //get active element
+  const active = event.target.closest(".container").getElementsByClassName("active")[0];
+  //remove class "active" from active element
+  if(active) {active.classList.remove("active");}
+  //get target element from link
+  const target = document.getElementById(event.target.closest("a").getAttribute("href").replace("#",""));
+  //add class "active" to the target
+  target.classList.add("active");
+  //prevent default link behaviour
+  event.preventDefault();
+}
+    </script>
+</body>
+</html>
