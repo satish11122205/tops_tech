@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>title</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <lable>Enter Fahrenheit:</lable>
+                    </td>
+                    <td><input type="text" name="farenheit" id="frnht" onblur="getresult()"placeholder="Fahrenheit"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>The answer is: <span id="result"></span></div>
+    </div>
+    <script>
+        function getresult() {
+            let td3 = document.createElement("td");
+            let td_span = document.createElement("span");
+            td_span.innerHTML = "please enter numberic value;"
+            let x = document.getElementById("frnht").value;
+            let span = document.querySelector("span");
+            let re = /^[0-9]{1,4}$/;
+            if (re.test(x)) {
+
+                if (document.querySelector("tr").contains(span)) {
+                    document.getElementById("frnht").style.border = "1px solid black";
+                    let y = (parseFloat(((parseInt(x) - 32) * 5 / 9))).toFixed(2);
+                    document.getElementById("result").innerHTML = y +"&nbsp"+"Celcius";
+                    span.remove();
+                }
+                let y = (parseFloat(((parseInt(x) - 32) * 5 / 9))).toFixed(2);
+
+                document.getElementById("result").innerHTML = y +"&nbsp"+"Celcius";
+            } else {
+                if (!(document.querySelector("tr").contains(span))) {
+                    document.getElementById("frnht").style.border = "1px solid red";
+                    document.querySelector("tr").appendChild(td3);
+                    td3.appendChild(td_span);
+                    document.getElementById("result").innerHTML = "";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
