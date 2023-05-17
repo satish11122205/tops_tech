@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+    body{
+  background-color: tan;
+}
+
+
+.calculator {
+  text-align: center;
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #Caa335;
+  padding: 5px;
+}
+
+.buttons {
+  width: 275px;
+  
+  text-align: center;
+  margin:10px auto;
+}
+
+.button{
+  float: left;
+  height: 40px;
+  /*t r b l*/
+  /*margin: 2px 2px 15px 2px;*/
+  /*width: 64.75px;*/
+  width: 68px;
+  color: #f19953;
+  background: #fff;
+  cursor: pointer;
+}
+
+.textbox {
+  margin: 10px 0px 5px 0px;
+  text-align: right;
+  border: none;
+  height: 25px;
+  width: 275px;
+  background-color: #F19953;
+}
+    </style>
+   
+</head>
+<body>
+    <div class="calculator" name="Calc">
+        <h1>Simple Calculator</h1>
+        <input type="text" name="Input" id="textbox" class="textbox" readonly>
+        <div class="buttons">
+          <button class="button" id="clear">AC</button>
+          <button class="button" id="CE"></button>
+          <button class="button" id="modulus">%</button>
+          <button class="button" id="divide">/</button>
+          <button class="button" id="7">7</button>
+          <button class="button" id="8">8</button>
+          <button class="button" id="9">9</button>
+          <button class="button" id="multiply">*</button>
+          <button class="button" id="4">4</button>
+          <button class="button" id="5">5</button>
+          <button class="button" id="6">6</button>
+          <button class="button" id="minus">-</button>
+          <button class="button" id="1">1</button>
+          <button class="button" id="2">2</button>
+          <button class="button" id="3">3</button>
+          <button class="button" id="plus">+</button>
+          <button class="button" id="dot">.</button>
+          <button class="button" id="0">0</button>
+          <button class="button" id="Ans"></button>
+          <button class="button" id="equals">=</button>
+        </div>
+      </div>
+
+      <script>
+        // A $( document ).ready() block.
+      $( document ).ready(function() {
+      //the javascript eval() function is a great resource that takes in a string and outputs that strings operations as a number eval("3 + 2") sends back 5
+      
+      $("#1").click(function() {
+       document.getElementById("textbox").value += '1';
+      });
+        
+      $("#2").click(function() {
+       document.getElementById("textbox").value += '2';
+      });
+        
+      $("#3").click(function() {
+       document.getElementById("textbox").value += '3';
+      });
+        
+      $("#4").click(function() {
+       document.getElementById("textbox").value += '4';
+      });  
+      
+      $("#5").click(function() {
+       document.getElementById("textbox").value += '5';
+      }); 
+        
+      $("#6").click(function() {
+       document.getElementById("textbox").value += '6';
+      }); 
+        
+      $("#7").click(function() {
+       document.getElementById("textbox").value += '7';
+      }); 
+        
+      $("#8").click(function() {
+       document.getElementById("textbox").value += '8';
+      }); 
+        
+      $("#9").click(function() {
+       document.getElementById("textbox").value += '9';
+      }); 
+        
+      $("#0").click(function() {  document.getElementById("textbox").value += '0';
+      }); 
+        
+      $("#dot").click(function() {  document.getElementById("textbox").value += '.';
+      });
+        
+        
+      $("#plus").click(function() {
+       document.getElementById("textbox").value += ' + ';
+      });
+        
+      $("#minus").click(function() {
+       document.getElementById("textbox").value += ' - ';
+      });
+        
+      $("#multiply").click(function() {
+       document.getElementById("textbox").value += ' * ';
+      });
+        
+      $("#divide").click(function() {
+       document.getElementById("textbox").value += ' / ';
+      });
+        
+      $("#modulus").click(function() {
+       document.getElementById("textbox").value += ' % ';
+      });
+        
+        
+      $("#equals").click(function() {
+       document.getElementById("textbox").value =  eval(document.getElementById("textbox").value);
+      });  
+        
+      $("#clear").click(function() {
+       document.getElementById("textbox").value =  '';
+      });   
+        
+        
+        
+      }); //close doc rdy func
+          </script>
+
+
+
+
+</body>
+</html>

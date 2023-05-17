@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conteiner{
+            display: flex;
+            height: 1800px;
+            background-color: khaki;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            border: solid 2px red;
+            margin: 10px;
+           
+        }
+        /* #item3{
+            position: relative;
+            top: 200px;
+        } */
+        /* #item3{
+            position: relative; */
+            /* top: 200px; */
+        /* } */
+        /* #item3{
+            position: fixed;
+            top: 200px;
+            right: 100px;
+        } */
+        #item3{
+            position: absolute;
+            /* top: 300px; */
+            top: 100px;
+            left: 100px;
+       
+        }
+        .mini-box{
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            margin: 10px;
+            position: absolute;
+            /* top: 50px; */
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="conteiner">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box " id="item3"> 
+            <div class="mini-box"></div>
+        </div>
+        <div class="box">4</div>
+    </div>
+    <div class="conteiner"></div>
+    
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            width: 1200px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .jcs {
+            justify-content: space-between;
+        }
+
+
+        .align-items {
+            align-items: center;
+            /* height: 50px;
+  vertical-align: middle; */
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /* header CSS START  */
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+            padding: 15px;
+        }
+
+        #menu-fixed {
+            width: 100%;
+            padding-top: 30px;
+        }
+
+        /* header CSS END */
+
+        .bg-img {
+            background-image: url(images/ballon.png);
+            clip-path: polygon(0 79%, 0 0, 100% 0, 100% 79%, 49% 100%);
+            height: 800px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slider-txt {
+            color: white;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .para-heading {
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #f4f5f9;
+            font-weight: 400;
+            font-family: "Source Sans Pro";
+            text-align: center;
+
+        }
+
+        .main-heading {
+            font-weight: 700;
+            font-size: 72px;
+            letter-spacing: 7px;
+            color: #f4f5f9;
+            font-weight: 700;
+            font-family: "Open Sans";
+            text-align: center;
+        }
+
+        .para-text {
+            width: 60%;
+            margin: 60px auto;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            font-family: "Open Sans";
+            text-align: center;
+        }
+
+        .design_img {
+            width: 18%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            /* top: 119px; */
+            bottom: 160px;
+        }
+
+        .txt-frans-capi {
+            font-size: 14px;
+            letter-spacing: 0px;
+            line-height: 40px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: "Open Sans";
+            width: 225px;
+            height: 52px;
+            border-radius: 3px;
+            filter: drop-shadow(0px 2px 2.5px rgba(0, 0, 0, 0.25));
+        }
+
+        .button_bw {
+            text-align: center;
+        }
+
+        .red-c {
+            background-color: #e74c3c;
+            border: 1px solid #e74c3c;
+            text-align: center;
+        }
+
+        .white-b {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+            border: 1px solid #ffffff;
+        }
+
+        h2 {
+            font-size: 4rem;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .col-50 {
+            width: 50%;
+        }
+
+        .col-70 {
+            width: 70%;
+        }
+
+        .text-left-2 {
+            margin-right: 0px;
+            margin-left: auto;
+        }
+
+        .bg-sec2 {
+            background-color: #999999;
+            text-align: right;
+            padding: 0px 70px 0px 0px;
+            line-height: 20px;
+            letter-spacing: 0px;
+            font-family: "Source Sans Pro";
+        }
+
+        .h-sec2 {
+            padding: 20px 0px 20px 0px;
+            color: #e74c3c;
+            font-weight: 700;
+            font-family: "Source Sans Pro";
+        }
+
+        .bg-sec2 span {
+            width: 6px;
+            height: 36px;
+            background-color: #e74c3c;
+        }
+
+        .h2-h {
+            font-size: 30px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .jcs-a {
+            justify-content: space-around;
+        }
+
+        .b1 {
+            text-align: center;
+        }
+
+        .box {
+            padding: 20px;
+            width: 100px;
+            max-height: 100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .box1 {
+            rotate: 45deg
+        }
+
+        .sec4 {
+            background: url(../images/Background.png);
+        }
+
+        .wavetopdiv {
+            padding: 100px 0px;
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .minisec1 {
+            padding: 50px 0px;
+        }
+
+        .minisec1 h1 {
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #6a6a6a;
+            font-weight: 600;
+            font-family: "Open Sans";
+            padding: 30px 0;
+        }
+
+        .minisec1 p {
+            width: 255px;
+            height: 70px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            line-height: 20px;
+            color: #999999;
+            font-weight: 300;
+            font-family: "Source Sans Pro";
+            text-align: center;
+        }
+
+        .pos-rel {
+            position: relative;
+        }
+
+        .pos-ab {
+            position: absolute;
+        }
+
+        .icon-middle {
+            left: 94%;
+        }
+        .icon-middle-wave1 {
+            left: 20%;
+            top: 377px;
+        }
+        .icon-middle-wave2 {
+            left: 40%;
+            top: 363px;
+        }
+        .icon-middle-wave3 {
+            left: 65%;
+            top: 392px;
+        }
+        .rec {
+            width: 380px;
+            background-color: #999999;
+        }
+        .b1-c {
+            width: 33%;
+            margin: 0 auto;
+        }
+        .rec1 {
+            font-size: 30px;
+            background-color: #999999;
+            padding-top: 30px;
+            padding-bottom: 101px;
+        }
+        .rec2 {
+            background-color: #f4f5f9;
+            padding-top: 80px;
+            padding-bottom: 40px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .cir1 {
+            height: 115px;
+            width: 115px;
+            border: 10px solid #f4f5f9;
+            border-radius: 84%;
+            color: white;
+            top: 150px;
+            left: 125px;
+            background-color: white;
+        }
+        .inerC_text {
+            top: 42px;
+            position: absolute;
+            color: black;
+        }
+        .rec1 h2 {
+            font-size: 30px;
+            text-align: center;
+        }
+        .r_2 {
+            background-color: #e74c3c;
+        }
+        .h_circ {
+            text-align: center;
+            padding: 40px 0px;
+            line-height: 30px;
+        }
+        .sec5 {
+            background-color: #d5d7dc;
+            text-align:center;
+        }
+        .left-p {
+            background-color: white;
+            width: 55%;
+            height: 500px;
+            border: 1px solid black;
+            top: 100px;
+        }
+        .col55 {
+            width: 55%;
+        }
+        .right {
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-img sec1">
+        <header id="menu-fixed">
+            <div class="container">
+                <div class="row align-items jcs-a">
+                    <div class="col">
+                        <div class="logo"><a href="#"><img src="images/Logo.png" alt=""></a></div>
+                    </div>
+                    <div class="col">
+                        <nav>
+                            <ul class="navbar">
+                                <li><a href="#">HOME</a></li>
+                                <li><a href="#">ABOUT US</a></li>
+                                <li><a href="#">PORTFOLIO</a></li>
+                                <li><a href="#">PRICING</a></li>
+                                <li><a href="#">TEAM</a></li>
+                                <li><a href="#">BLOG</a></li>
+                                <li><a href="#">CONTACT</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="slider-txt">
+            <p class="para-heading">our client is our first priority</p>
+            <h2 class="main-heading">Welcome to sky</h2>
+            <div class="design_img">
+                <img src="./images/Design.png" />
+            </div>
+            <p class="para-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, commodi. Nostrum at,
+                tempore consectetur qui nulla, quo ea esse laudantium.</p>
+            <button class="txt-frans-capi red-c">get started now</button>
+            <button class="txt-frans-capi white-b">learn more</button>
+
+        </div>
+    </div>
+    <div class="minisec1">
+        <div class="row jcs container">
+            <div class="b1">
+                <div class="box box-1">
+                    <img src="./images/b2.png" alt="">
+                </div>
+                <h1>SLEEK DESIGN</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    let. Lorem Ipsum has been the industry.
+                </p>
+            </div>
+            <div class="b1">
+                <div class="box"><img src="./images/b3.png" alt=""></div>
+                <h1>CLEAN CODE</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    let. Lorem Ipsum has been the industry.
+                </p>
+            </div>
+            <div class="b1">
+                <div class="box"><img src="./images/b4.png" alt=""></div>
+                <h1>CREATIVE IDEA</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    let. Lorem Ipsum has been the industry.
+                </p>
+            </div>
+            <div class="b1">
+                <div class="box"><img src="./images/b3.png" alt=""></div>
+                <h1>FREE SUPPORT</h1>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    let. Lorem Ipsum has been the industry.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="sec2">
+
+        <div class="row jcs container sec2_main">
+            <div class="col-50 bg-sec2 pos-rel">
+                <div class="header_sec2">
+                    <h2 class="h2-h">Our Services</h2><span class=""></span>
+                </div>
+                <div class="h-sec2">
+                    <h3>Web Design</h3>
+                </div>
+                <div class="">
+                    <p>Lorem, ipsum dolor sit adipisicing elit. Similique voluptatum repellat repellendus in dolores,
+                        cumque enim dolore autem porro.
+                        Commodi ratione id atque s ipsam.</p>
+                </div>
+                <div class="icon-middle pos-ab"><img src="./images/b3.png" /></div>
+                <div class="h-sec2">
+                    <h3>Print Design</h3>
+                </div>
+                <div class="">
+                    <p>Lorem ipsum dolor sit amet elit. Aliquid quis, nesciunt dolorem velit voluptatibus earum?
+                        Aspernatur d, expedita quis vel suscipit corporis blanditiis sed odit perspiciatis.</p>
+                </div>
+                <div class="icon-middle pos-ab"><img src="./images/b4.png" /></div>
+
+                <div class="h-sec2">
+                    <h3>Photography</h3>
+                </div>
+                <div class="">
+                    <p>Lorem ipsum dolor sit amet elit. Voluptas placeat quidem tenetur dolores expedita, culpa eligendi
+                        d deserunt quibusdam doloremque cupiditate quam. Commodi itaque rem magni cum.</p>
+                </div>
+                <div class="icon-middle pos-ab"><img src="./images/b2.png" /></div>
+            </div>
+            <div class="col-50">
+                <div>
+                    <a><img src="./images/b1.png" /></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="sec4">
+
+        <div class="main4 pos-rel">
+            <div class="wavetopdiv">
+                <h2>OUR TEAM</h2>
+                <P>meet the craziest team.share your thought with them.</P>
+            </div>
+            <div class="icon-middle-wave1 pos-ab"><img src="./images/b4.png" /></div>
+            <div class="icon-middle-wave2 pos-ab"><img src="./images/b2.png" /></div>
+            <div class="icon-middle-wave3 pos-ab"><img src="./images/b3.png" /></div>
+
+
+
+            <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#e74c3c" fill-opacity="0.12"
+                        d="M0,224L60,192C120,160,240,96,360,69.3C480,43,600,53,720,64C840,75,960,85,1080,80C1200,75,1320,53,1380,42.7L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="threrec">
+        <div class="container">
+            <div class="h_circ">
+                <h3>
+                    Our pricing
+                </h3>
+                <div>
+                    <p>30 day free trial.a brief story about the trial that how it worrks.</p>
+                </div>
+            </div>
+            <div class="row jcs">
+                <div class="b1-c pos-rel">
+                    <div class="rec1">
+                        <h2>STARTER</h2>
+                    </div>
+                    <div class="cir1 pos-ab">
+                        <div class="inerC_text pos_ab">$19.00/month</div>
+                    </div>
+                    <div class="rec2">
+                        <p>Lorem ipsum dolor sit,
+                            amet consectetur adipisicing elit. Nobis quaerat quo vel autem obcaecati illo iusto
+                            pariatur, nesciunt optio quibusdam, modi, eum ut voluptate earum velit veniam. Nam, facere
+                            dolorem?</p>
+                        <div>
+                            <button>choos eplan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="b1-c pos-rel">
+                    <div class="rec1 r_2">
+                        <h2>PREMIUM</h2>
+                    </div>
+                    <div class="cir1 pos-ab">
+                        <div class="inerC_text pos_ab">$39.00/month</div>
+                    </div>
+                    <div class="rec2">
+                        <p>Lorem ipsum dolor sit,
+                            amet consectetur adipisicing elit. Nobis quaerat quo vel autem obcaecati illo iusto
+                            pariatur, nesciunt optio quibusdam, modi, eum ut voluptate earum velit veniam. Nam, facere
+                            dolorem?</p>
+                        <div>
+                            <button>choos eplan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="b1-c pos-rel">
+                    <div class="rec1">
+                        <h2>BUSINESS </h2>
+                    </div>
+                    <div class="cir1 pos-ab">
+                        <div class="inerC_text pos_ab">$99.00/month</div>
+                    </div>
+                    <div class="rec2">
+                        <p>Lorem ipsum dolor sit,
+                            amet consectetur adipisicing elit. Nobis quaerat quo vel autem obcaecati illo iusto
+                            pariatur, nesciunt optio quibusdam, modi, eum ut voluptate earum velit veniam. Nam, facere
+                            dolorem?</p>
+                        <div>
+                            <button>choos eplan</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container sec5 pos-rel">
+        <h1>CASE STUDY</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores commodi, consequatur ratione dicta
+            rerum repudiandae.</p>
+
+        <div>
+            <div class="left-p col55 pos-ab">
+                <div class="">
+                    <img src=""/>
+                </div>
+                <h1>ACCUMULATE CREATIVE IDEAS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non magni saepe sunt aliquam qui,
+                    reiciendis necessitatibus quae veniam dignissimos provident iusto! Inventore delectus recusandae
+                    cupiditate ipsum natus libero, sed officiis eos amet! Deleniti, ipsum voluptatibus.</p>
+                <button class="btn">READ MORE</button>
+                <div class=""></div>
+            </div>
+
+            <div class="right col55">
+                <img src="./images/b1.png" alt="">
+            </div>
+
+        </div>
+    </div>

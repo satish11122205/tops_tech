@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,6 +70,82 @@
             <div class="box"><a href="#"><img src="./images/p2.jpg"></a></div>
             <div class="box"><a href="#"><img src="./images/p4.jpg"></a></div>
 
+        </div>
+    </section> -->
+    
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            background-color: darkgoldenrod;
+        }
+        .box{
+            /* width: 150px;
+            height: 150px; */
+            background-color: darkcyan;
+            /* margin: 10px; */
+
+        }
+        .conteiner{
+            height: 1300px;
+            display: grid;
+            row-gap: 5PX;
+            column-gap: 5PX;
+            /* grid-template-rows: 150PX 150PX 150PX;
+            grid-template-columns: 150PX 150PX 150PX; */
+            /* grid-template-rows: repeat(3 ,1fr);
+            grid-template-columns: repeat(3,1fr); */
+            grid-template-rows: 100px 1fr 1fr 100px;
+            grid-template-columns: 1fr 1fr 1fr ;
+        }
+        #item1{
+            color: white;
+            font-size: 50px;
+            text-align: center;
+           grid-column-start: 1;
+           grid-column-end: 4;
+
+        }
+        #item2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        #iteem3{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        #footer{
+            color: white;
+            font-size: 50px;
+            text-align: center;
+           grid-column-start: 1;
+           grid-column-end: 4;
+
+        }
+    </style>
+</head>
+<body>
+
+
+    <section>
+        <div class="conteiner">
+            <div class="box" id="item1"> Header</div>
+            <div class="box" id="item2"> sec</div>
+            <div class="box" id="iteem3"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box" id="footer">footer</div>
+            <div class="box"></div>
+            <div class="box"></div>
         </div>
     </section>
     

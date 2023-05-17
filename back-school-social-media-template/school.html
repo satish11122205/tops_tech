@@ -12,30 +12,31 @@
 
         .row {
             display: flex;
+            flex-wrap: wrap;
         }
 
         .col-15 {
-            width: 15%;
+            width: 100%;
         }
 
         .col-70 {
-            width: 70%;
+            width: 100%;
         }
 
         .col-50 {
-            width: 50%;
+            width: 100%;
         }
 
         .col-25 {
-            width: 25%;
+            width: 100%;
         }
 
         .col-30 {
-            width: 30%;
+            width: 100%;
         }
 
         .col-35 {
-            width: 35%;
+            width: 100%;
         }
 
         .align_c {
@@ -59,6 +60,7 @@
         }
 
         .container {
+            width:100%;
             margin: 0 auto;
         }
 
@@ -168,6 +170,21 @@
         .sec_4_row {
             padding: 100px 50px 100px 50px;
         }
+        .w-100{
+            width:100%;
+        }
+        .w-100 img{
+            width:100%;
+        }
+        @media (min-width:1200px){
+            .container{
+                width:1150px;
+            }
+            .col-50 {
+            width: 50%;
+        }
+
+        }
     </style>
 </head>
 
@@ -176,7 +193,7 @@
         <header>
             <div class="container">
                 <nav class="row jcs align_item page_one">
-                    <div class=logo_search">
+                    <div class="logo_search">
                         <div class="logo"><a href="#"><img src="image/s1.png" /></a></div>
 
                     </div>

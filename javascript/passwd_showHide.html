@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+
+    <body>
+        <form method="post">
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="password">Enter Password :</label></td>
+                        <td><input type="password" value="topsaccount" id="Input_pwd"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" onclick="showhide()">Show Password</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </form>
+        <script>
+            function showhide() {
+                let x = document.getElementById("Input_pwd");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
+    </body>
+</html>

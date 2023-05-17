@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+
+<body>
+    <h1> Math Operations</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td><label for="number1">Number 1 :</label></td>
+                <td><input type="text" value="" id="input_number1" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td><label for="number2">Number 2 :</label></td>
+
+                <td><input type="text" value="" id="input_number2" min="1" max="5"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="button_main">
+        <div class="button">
+            <button onclick=addition()>+</button>
+            <button onclick=subtraction()>-</button>
+
+            <button onclick=multiplication()>*</button><br />
+            <button onclick=divide()>/</button>
+            <button onclick=percentage()>%</button>
+        </div>
+        <div>Answer is :<span class="ans"></span></div>
+    </div>
+
+
+    <script>
+
+        let answer = document.querySelector("span.ans");
+
+        function addition() {
+            let x = parseInt(document.getElementById("input_number1").value);
+            let y = parseInt(document.getElementById("input_number2").value);
+            if (x * y > 2000) {
+                alert("Your numbers are too big!")
+            } else {
+                answer.innerHTML = x + y;
+            }
+        }
+
+
+
+        function subtraction() {
+            let x = parseInt(document.getElementById("input_number1").value);
+            let y = parseInt(document.getElementById("input_number2").value);
+            if (x * y > 2000) {
+                alert("Your numbers are too big!")
+            } else {
+                answer.innerHTML = x - y;
+            }
+        }
+        function multiplication() {
+            let x = parseInt(document.getElementById("input_number1").value);
+            let y = parseInt(document.getElementById("input_number2").value);
+            if (x * y > 2000) {
+                alert("Your numbers are too big!")
+            } else {
+                answer.innerHTML = x * y;
+            }
+        }
+        function divide() {
+            let x = parseInt(document.getElementById("input_number1").value);
+            let y = parseInt(document.getElementById("input_number2").value);
+            if (x * y > 2000) {
+                alert("Your numbers are too big!")
+            } else {
+                answer.innerHTML = x / y;
+            }
+        }
+        function percentage() {
+            let x = parseInt(document.getElementById("input_number1").value);
+            let y = parseInt(document.getElementById("input_number2").value);
+            if (x * y > 2000) {
+                alert("Your numbers are too big!")
+            } else {
+                answer.innerHTML = x % y;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
