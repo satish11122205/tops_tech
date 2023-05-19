@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 50px;
+            margin: 5px;
+            padding: 5px;
+            float: left;
+        }
+
+        #box1 {
+            width: 50px;
+            color: yellow;
+            background-color: blue;
+        }
+
+        #box2 {
+            width: 80px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(15, 99, 30);
+        }
+
+        #box3 {
+            width: 40px;
+            color: #fcc;
+            background-color: #123456;
+        }
+
+        #box4 {
+            width: 70px;
+            background-color: #f11;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        menu
+    </header>
+    <main>
+
+        <p id="result">&nbsp;</p>
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+        <div id="box4">4</div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script>
+            $('div').click(function () {
+                // let htmlContent = []
+                let htmlContent ="" 
+                // console.log("called");
+                // console.log(this);
+                // console.log($(this));
+                // console.log($(this).css([ "width", "height", "color", "background-color"]));
+                var styleProps = $(this).css([ "width", "height", "color", "background-color"])
+                console.log(styleProps);
+                $.each(styleProps,function (key,value) {
+                    // console.log(key,value);
+                    // htmlContent.push( key + ": " + value )
+                    htmlContent += "<p>"+key + ": " + value+"<p>"
+                })
+                // $("#result").html(htmlContent.join( "<br>" ));
+                $("#result").html(htmlContent)
+                console.log(htmlContent);
+            })
+        </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .square{
+            border:1 px solid black;
+            background-color:brown;
+            width:100px;
+            height:100px;
+        }
+        .buttons{
+            margin:40px 0px;
+        }
+        .maindiv{
+            margin:0px 40px;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous">
+</script>
+    </head>
+    <body>
+<div class="maindiv">
+<p class="p1"> hi welcome to jquery class</p>
+<p class="p2">it is a one of the library</p>
+<input type="text" value="enter your name" id="input"/>
+
+<p class="p3">you can use cdn for this</p>
+<div class="square"><br/>
+
+</div>
+<div class="buttons">
+<button class="b_t">change text</button>
+<button class="b_h">change html</button>
+<button class="b_v">change value</button>
+<button class="b_a">change alignment</button>
+<button class="b_s">change shape</button>
+</div>
+<script>
+$('button').click(function () {
+    //alert($(this).index());
+    if($(this).hasClass('b_t')){
+        $(".p1").text("hi welcome to javascript class");
+
+    }
+else if($(this).hasClass('b_h')){
+    $(".p2").html("<div>it is a one of the javascript library</div>")
+
+        
+    }
+   else if($(this).hasClass('b_v')){
+    $("#input").val("enter your first name")
+   
+    }
+   else if($(this).hasClass('b_a')){
+    $(".p3").css("text-align","center")
+ 
+    }
+   else if($(this).hasClass('b_s')){
+    $(".square").css("width","400px")
+ 
+    }
+
+});
+</script>
+
+
+
+</div>
+    </body>
+

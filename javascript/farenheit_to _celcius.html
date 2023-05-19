@@ -22,7 +22,7 @@
         function getresult() {
             let td3 = document.createElement("td");
             let td_span = document.createElement("span");
-            td_span.innerHTML = "please enter numberic value;"
+            td_span.innerHTML = "please enter numeric value;"
             let x = document.getElementById("frnht").value;
             let span = document.querySelector("span");
             let re = /^[0-9]{1,4}$/;
@@ -30,11 +30,11 @@
 
                 if (document.querySelector("tr").contains(span)) {
                     document.getElementById("frnht").style.border = "1px solid black";
-                    let y = (parseFloat(((parseInt(x) - 32) * 5 / 9))).toFixed(2);
+                    let y = ((parseFloat(x) - 32) * 5 / 9).toFixed(2);
                     document.getElementById("result").innerHTML = y +"&nbsp"+"Celcius";
                     span.remove();
                 }
-                let y = (parseFloat(((parseInt(x) - 32) * 5 / 9))).toFixed(2);
+                let y = ((parseFloat(x) - 32) * 5 / 9).toFixed(2);
 
                 document.getElementById("result").innerHTML = y +"&nbsp"+"Celcius";
             } else {
