@@ -55,13 +55,13 @@
 
 <script>
     function result() {
-        let c = parseInt(document.getElementById("c_lang").value);
-        let c_plus = parseInt(document.getElementById("cplus").value);
-        let d = parseInt(document.getElementById("database").value);
-        let h = parseInt(document.getElementById("h_tml").value);
-        let cs = parseInt(document.getElementById("c_ss").value);
-        let p = parseInt(document.getElementById("p_hp").value);
-        let core = parseInt(document.getElementById("core").value);
+        let c = parseFloat(document.getElementById("c_lang").value);
+        let c_plus = parseFloat(document.getElementById("cplus").value);
+        let d = parseFloat(document.getElementById("database").value);
+        let h = parseFloat(document.getElementById("h_tml").value);
+        let cs = parseFloat(document.getElementById("c_ss").value);
+        let p = parseFloat(document.getElementById("p_hp").value);
+        let core = parseFloat(document.getElementById("core").value);
 
         let t = c + c_plus + d + h + cs + p + core;
         let percent = t * 100 / 700 + '%';
