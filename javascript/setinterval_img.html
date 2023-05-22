@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script>
+        let image = document.getElementById("aaa");
+        let img_array=["../images/p1.jpg","../images/p2.jpg","../images/p3.jpg","../images/p4.jpg"];
+        let index=0;
+        function slide()
+        {
+        
+            document["aaa"].src = img_array[index];
+            index++;
+            if(index>=img_array.length)
+            {
+            index=0;
+            }
+        }
+        setInterval("slide()",2000);
+       
+
+        </script>
+<img id="aaa" src="../images/p3.jpg" width="400" height="400" name="image" />
+</body>
+</html>

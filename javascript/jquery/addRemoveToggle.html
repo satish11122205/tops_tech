@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        .a3 {
+            background-color: green;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="maindiv">
+        <div class="a1 a2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quas repellat esse, adipisci sed
+                quisquam maxime velit ex eveniet quibusdam nulla
+                reiciendis rerum asperiores ipsum temporibus accusantium distinctio corporis atque!</p>
+        </div>
+    </div>
+    <button class="add" type="button">add class</button>
+    <button class="remove" type="button">remove class</button>
+
+    <button class="toggle" type="button">toggle class</button>
+    <!-- <button type="button">remove class</button>
+    <button type="button">toggleclass</button> -->
+
+    <script>
+        $('button.add').click(function () {
+            console.log("clicked")
+            if (!($('div.maindiv div.a1')).hasClass('a3')) {
+                $('div.maindiv div.a1').addClass('a3');
+                $("div.maindiv div.a1").animate({ height: '200px' });
+            }
+            else {
+                //$('div.maindiv div.a1').addClass('a3');
+
+            }
+        });
+        $('button.remove').click(function () {
+            console.log("clicked")
+            if ($('div.maindiv div.a1').hasClass('a3')) {
+                $('div.maindiv div.a1').removeClass('a3');
+                $("div.maindiv div.a1").animate({ height: '50px' });
+
+            }
+            else {
+                // $('div.maindiv div.a1').addClass('a3');
+
+            }
+        });
+        $('button.toggle').click(function () {
+            console.log("clicked")
+            if (($('div.maindiv div.a1')).hasClass('a3')) {
+                $('div.maindiv div.a1').removeClass('a3');
+                $("div.maindiv div.a1").animate({ height: '50px' });
+
+            }
+            else {
+                $('div.maindiv div.a1').addClass('a3');
+                $("div.maindiv div.a1").animate({ height: '200px' });
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>

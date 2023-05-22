@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs
+ in an element inside another element, and both elements have registered a handle for that event.
+  The event propagation mode determines in which order the elements receive the event.
+With bubbling, the event is first captured and handled by the innermost element and then 
+propagated to outer elements.
+With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+Capturing is also called "trickling", which helps remember the propagation order:
+trickle down, bubble up
+We can use the addEventListener(type, listener, useCapture) to register event handlers
+ for in either bubbling (default) or capturing mode. To use the capturing model pass the third argument as true. -->
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        p {
+    line-height: 0;
+}
+
+div {
+    display:inline-block;
+    padding: 5px;
+
+    background: #fff;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+div:hover {
+    border: 1px solid #faa;
+    background: #fdd;
+}
+    </style>
+</head>
+<body>
+   
+	<h2>Bubbling Event in Javascript</h2>
+
+	<div id="parent">
+		<button>
+			<h2>Parent</h2>
+		</button>
+		<button id="child">
+
+			<p>Child</p>
+
+		</button>
+	</div><br>
+
+
+    <div>1
+        <div>2
+            <div>3
+                <div>4
+                    <div>5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="clear">clear output</button>
+    <section id="log"></section>
+    <script>
+         document.getElementById(
+        "child").addEventListener("click", function () {
+            alert("You clicked the Child element!");
+        }, false);
+          
+        document.getElementById(
+        "parent").addEventListener("click", function () {
+            alert("You clicked the parent element!");
+        }, false);
+      
+
+        let logElement = document.getElementById('log');
+
+function log(msg) {
+    logElement.innerHTML += ('<p>' + msg + '</p>');
+}
+
+function capture() {
+    log('capture: ' + this.firstChild.nodeValue.trim());
+}
+
+function bubble() {
+    log('bubble: ' + this.firstChild.nodeValue.trim());
+}
+
+function clearOutput() {
+    logElement.innerHTML = "";
+}
+
+let divs = document.getElementsByTagName('div');
+for (let i = 0; i < divs.length; i++) {
+    divs[i].addEventListener('click', capture, true);
+    divs[i].addEventListener('click', bubble, false);
+}
+let clearButton = document.getElementById('clear');
+clearButton.addEventListener('click', clearOutput);
+    </script>
+</body>
+
+</html>

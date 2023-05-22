@@ -1,0 +1,176 @@
+1.What is JavaScript?
+ans-
+    <p>JavaScript is client side scripting lang</p>
+    <p>We can plugged in JavaScript to our HTML page With script Tag</p>
+    <p>js prefrabble in foot</p>
+    <p>we can perform</p>
+    <ul>
+        <li>Handle events</li>
+        <li>Slider</li>
+        <li>Time based events</li>
+        <li>Dynamic CSS</li>
+        <li>User input DOM manupulation</li>
+    </ul>
+2.what is jquery?
+
+ANs-jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and
+        manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a
+        multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that
+        millions of people write JavaScript.
+3.What is the use of isNaN function?
+Ans-to check the value of any variable or state is a number or not.
+4.What is negative Infinity?
+
+ans.The negative infinity in JavaScript is a constant value that is used to represent a value that is the lowest available. This means that no other number is lesser than this value. It can be generated using a self-made function or by an arithmetic operation. 
+
+Note: JavaScript shows the NEGATIVE_INFINITY value as -Infinity.
+5.Which company developed JavaScript?
+ans-JavaScript was invented by Brendan Eich in 1995.
+
+It was developed for Netscape 2, and became the ECMA-262 standard in 1997.
+
+After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to develop JavaScript for the Firefox browser.
+ Mozilla's latest version was 1.8.5. (Identical to ES5).
+6.• What are undeclared and undefined variables?
+ans-Undeclared variables are those that have not been declared or defined in the current scope, while undefined variables are those that have been declared but not given a value.
+7.Write the code for adding new elements dynamically?
+ans-<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+
+	<style>
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+		}
+
+		.button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.tasks {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="button">
+		<button id="addTask">Add task</button>
+	</div>
+	<div class="tasks"></div>
+	<script type="text/javascript">
+
+		// Getting the parent element in which
+		// the new div will be created
+		let task = document.getElementsByClassName("tasks");
+
+		// Getting the addTask button element
+		let addTask = document.getElementById("addTask");
+		
+		// Adding onclick event to the button
+		addTask.addEventListener('click', function () {
+	
+			// Traversing through collection of HTML
+			// elements (tasks here)
+			for (let i = 0; i < task.length; i++) {
+				
+				// New div element is created
+				let newDiv = document.createElement("div");
+					
+				// Setting the attribute of class type to newDiv
+				newDiv.setAttribute("class", "list");
+					
+				// innerText used to write the text in newDiv
+				newDiv.innerText = "New Div created";
+					
+				// Finally append the newDiv to the
+				// parent i.e. tasks
+				task[i].append(newDiv);
+			}
+		})
+	</script>
+</body>
+
+</html>
+
+8.What is the difference between ViewState and SessionState?
+ans-Session state is saved on the server, ViewState is saved in the page.
+
+Session state is usually cleared after a period of inactivity from the user (no request happened containing the session id in the request cookies).
+
+The view state is posted on subsequent post back in a hidden field.
+9.• What is === operator?
+
+ans-The strict equality ( === ) operator checks whether its two operands are equal, returning a Boolean result. Unlike the equality operator,
+ the strict equality operator always considers operands of different types to be different.
+10.• How can the style/class of an element be changed?
+ans 1. document.getElementById("id").style.property = new_style
+2.Approach 2: Changing the class itself 
+document.getElementById("id").classList
+You can use the below-mentioned methods to add classes, remove classes, and toggle between different classes respectively.
+
+The add() method: It adds one or more classes.
+The remove() method: It removes one or more classes.
+The toggle() method: If the class does not exist it adds it and returns true. 
+It removes the class and returns false. The second boolean argument forces the class to be added or removed.
+or setting the current class to other class,mentioned in next line
+3.document.getElementById("id").className = class
+
+
+11.How to read and write a file using JavaScript?
+ans-The fs.readFile() and rs.writeFile() methods are used to read and write of a file using javascript. The file is read using the fs.readFile() function, which is an inbuilt method. 
+This technique reads the full file into memory and stores it in a buffer. 
+12.
+ans-JavaScript supports different kinds of loops:
+13.What are all the looping structures in JavaScript?
+for - loops through a block of code a number of times
+for/in - loops through the properties of an object
+for/of - loops through the values of an iterable object
+while - loops through a block of code while a specified condition is true
+do/while - also loops through a block of code while a specified condition is true
+14.• How can you convert the string of any base to an integer in JavaScript?
+ans-To convert a string to an integer parseInt(), Number(), and Unary operator(+) function 
+is used in javascript. parseInt() function returns Nan( not a number) when the string doesn't 
+contain number. If a string with a number is sent, then only that number
+ will be returned as the output. This function won't accept spaces.
+15.• What is the function of the delete operator?
+ans-This operator is more specifically used to delete JavaScript object properties.
+
+The JavaScript pop(), shift(), or splice() methods are available to delete an element from an array. 
+But because of the key-value pair in an object, deleting is more complicated. 
+Note that, the delete operator only works on objects and not on variables or functions.
+
+16.What are all the types of Pop up boxes available in JavaScript?
+ans-JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.
+17.What is the use of Void (0)?
+ans-Using “javascript:void(0);” in anchor tag: Writing “javascript:void(0);” in anchor tag can prevent the page to reload and 
+JavaScript functions can be called on single or double clicks easily.
+18.• How can a page be forced to load another page in JavaScript?
+ans-In JavaScript, we can use window. location object to force a page to load another page. We can use the location object to set the URL of a new page.
+19.• What are the disadvantages of using innerHTML in JavaScript?
+
+ans-The use of innerHTML very slow: The process of using innerHTML is much slower as its contents as slowly built, also already parsed contents and elements are also re-parsed which takes time.
+
+Preserves event handlers attached to any DOM elements: The event handlers do not get attached to the new elements created by setting innerHTML automatically. To do so one has to keep track of the event handlers and attach it to new elements manually. This may cause a memory leak on some browsers.
+
+Content is replaced everywhere: Either you add, append, delete or modify contents on a webpage using innerHTML, all contents is replaced, also all the DOM nodes inside that element are reparsed and recreated.
+
+Appending to innerHTML is not supported: Usually, += is used for appending in JavaScript. But on appending to an Html tag using innerHTML, the whole tag is re-parsed.
+
+Can break the document: There is no proper validation provided by innerHTML, so any valid HTML code can be used. This may break the document of JavaScript. Even broken HTML can be used, which may lead to unexpected problems.
+
+
+
