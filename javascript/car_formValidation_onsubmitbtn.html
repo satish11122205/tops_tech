@@ -117,7 +117,7 @@
                     document.forms['carform']['lastname'].nextSibling.remove();
                 }
             }
-            if (c == "" || regName.test(c)) {
+            if (!regPhone.test(c)) {
                 let txt = document.createElement("SPAN");
                 txt.innerHTML = "phone number is required";
                 if (document.forms['carform']['phonenumber'].nextSibling == null) {
@@ -131,7 +131,7 @@
                     document.forms['carform']['phonenumber'].nextSibling.remove();
                 }
             }
-            if (em == "" || regName.test(em)) {
+            if (!regEmail.test(em)) {
                 let txt = document.createElement("SPAN");
                 txt.innerHTML = "email is required";
                 if (document.forms['carform']['email'].nextSibling == null) {
