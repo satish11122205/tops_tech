@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        input[type=text]:focus {
+            border: 3px solid #079229;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>car company test drive form validation on sumbit button click</h2>
+    <form method="post" name="carform" onsubmit="validateform()">
+        <table>
+            <tbody>
+                <tr>
+                    <td><label>first name</label></td>
+                    <td><input type="text" name="firstname" /></td>
+                </tr>
+                <tr>
+                    <td><label>last name</label></td>
+                    <td><input type="text" name="lastname" /></td>
+                </tr>
+
+                <tr>
+                    <td><label>phone number</label></td>
+                    <td><input type="text" name="phonenumber" /></td>
+
+
+                </tr>
+                <tr>
+                    <td><label>email address</label></td>
+                    <td><input type="text" name="email" /></td>
+
+
+                </tr>
+                <td><label>age range</label></td>
+
+                <td>
+                    <input type="checkbox" value="a1" name="age" />21-29 <input value="a2" type="checkbox"
+                        name="age" />30-39
+                    <input value="a3" type="checkbox" name="age" />40-49<input value="a4" type="checkbox"
+                        name="age" />above50
+                </td>
+                <tr>
+                    <td><label>select car to drive</label></td>
+
+                    <td><input type="checkbox" value="b1" name="vehicle" />teslaModely <input value="b2" type="checkbox"
+                            name="vehicle" />teslaModelx
+                        <input value="b3" type="checkbox" name="vehicle" />teslaModelz<input value="b4" type="checkbox"
+                            name="vehicle" />teslaModela
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="submit" /></td>
+                    <td><input type="button" name="reset" value="reset" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script>
+        function validateform() {
+            a = document.forms['carform']['firstname'].value;
+            b = document.forms['carform']['lastname'].value;
+            c = document.forms['carform']['phonenumber'].value;
+            em = document.forms['carform']['email'].value;
+
+            d = document.forms['carform']['age'].value;
+            e = document.forms['carform']['vehicle'].value;
+            let arr_age = [];
+            let checkboxes_age = document.querySelectorAll("input[name='age']:checked");
+            for (let i = 0; i < checkboxes_age.length; i++) {
+                arr_age.push(checkboxes_age[i].value);
+                arr_age.toString();
+            }
+            let arr_vehicle = [];
+            let checkboxes_vehicle = document.querySelectorAll("input[name='vehicle']:checked");
+            for (let i = 0; i < checkboxes_vehicle.length; i++) {
+                arr_vehicle.push(checkboxes_vehicle[i].value);
+                arr_vehicle.toString()
+            }
+            var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+            var regPhone = /^\d{10}$/;
+            var regName = /\d+$/g;
+            let txt = document.createElement("SPAN");
+            txt.innerHTML = "this field is required";
+
+            if (a == "" || regName.test(a)) {
+                let txt = document.createElement("SPAN");
+                txt.innerHTML = "first name is required";
+                if (document.forms['carform']['firstname'].nextSibling == null) {
+
+                    document.forms['carform']['firstname'].parentNode.appendChild(txt);
+                }
+            }
+            else {
+
+                if (document.forms['carform']['firstname'].nextSibling !== null) {
+                    document.forms['carform']['firstname'].nextSibling.remove();
+                }
+            }
+            if (b == "" || regName.test(b)) {
+                let txt = document.createElement("SPAN");
+                txt.innerHTML = "last name is required";
+                if (document.forms['carform']['lastname'].nextSibling == null) {
+
+                    document.forms['carform']['lastname'].parentNode.appendChild(txt);
+                }
+            }
+            else {
+
+                if (document.forms['carform']['lastname'].nextSibling !== null) {
+                    document.forms['carform']['lastname'].nextSibling.remove();
+                }
+            }
+            if (c == "" || regName.test(c)) {
+                let txt = document.createElement("SPAN");
+                txt.innerHTML = "phone number is required";
+                if (document.forms['carform']['phonenumber'].nextSibling == null) {
+
+                    document.forms['carform']['phonenumber'].parentNode.appendChild(txt);
+                }
+            }
+            else {
+
+                if (document.forms['carform']['phonenumber'].nextSibling !== null) {
+                    document.forms['carform']['phonenumber'].nextSibling.remove();
+                }
+            }
+            if (em == "" || regName.test(em)) {
+                let txt = document.createElement("SPAN");
+                txt.innerHTML = "email is required";
+                if (document.forms['carform']['email'].nextSibling == null) {
+
+                    document.forms['carform']['email'].parentNode.appendChild(txt);
+                }
+            }
+            else {
+
+                if (document.forms['carform']['email'].nextSibling !== null) {
+                    document.forms['carform']['email'].nextSibling.remove();
+                }
+            }
+            if (arr_age.length == 0) {
+                let txt = document.createElement("SPAN");
+                txt.innerHTML = "age is required";
+                txt.setAttribute('id', 'agespan');
+                if(document.getElementById("agespan")==null){
+                //let checkboxes_age = document.querySelectorAll("input[name='age']:checked");
+                document.querySelector("input[name='age']").parentNode.appendChild(txt);
+            }
+        }
+
+            else {
+                if(document.getElementById("agespan")!==null){
+                    document.getElementById("agespan").remove();
+                }
+
+            }
+            if (arr_vehicle.length == 0) {
+                let txt = document.createElement("SPAN");
+                txt.innerHTML = "vehicle name is required";
+                txt.setAttribute('id', 'vehiclespan');
+                if(document.getElementById("vehiclespan")==null){
+                //let checkboxes_age = document.querySelectorAll("input[name='age']:checked");
+                document.querySelector("input[name='vehicle']").parentNode.appendChild(txt);
+            }
+        }
+            else {
+                if(document.getElementById("vehiclespan")!==null){
+                    document.getElementById("vehiclespan").remove();
+                }
+
+            }
+
+            event.preventDefault();
+        }
+    </script>
+</body>
+
+</html>
