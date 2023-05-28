@@ -9,6 +9,9 @@
             border: 3px solid #079229;
             background-color: aquamarine;
         }
+        span{
+        color:red;
+      }
     </style>
 </head>
 
@@ -85,63 +88,69 @@
             var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
             var regPhone = /^\d{10}$/;
             var regName = /\d+$/g;
-            let txt = document.createElement("SPAN");
-            txt.innerHTML = "this field is required";
-
             if (a == "" || regName.test(a)) {
                 let txt = document.createElement("SPAN");
                 txt.innerHTML = "first name is required";
                 if (document.forms['carform']['firstname'].nextSibling == null) {
-
                     document.forms['carform']['firstname'].parentNode.appendChild(txt);
+                    document.forms['carform']['firstname'].style.border="1px solid red";
                 }
             }
             else {
-
                 if (document.forms['carform']['firstname'].nextSibling !== null) {
                     document.forms['carform']['firstname'].nextSibling.remove();
+                    document.forms['carform']['firstname'].style.border="1px solid black";
+
                 }
             }
             if (b == "" || regName.test(b)) {
                 let txt = document.createElement("SPAN");
                 txt.innerHTML = "last name is required";
                 if (document.forms['carform']['lastname'].nextSibling == null) {
-
                     document.forms['carform']['lastname'].parentNode.appendChild(txt);
+                    document.forms['carform']['lastname'].style.border="1px solid red";
+
                 }
             }
             else {
-
                 if (document.forms['carform']['lastname'].nextSibling !== null) {
                     document.forms['carform']['lastname'].nextSibling.remove();
+                    document.forms['carform']['lastname'].style.border="1px solid black";
+
                 }
             }
             if (!regPhone.test(c)) {
                 let txt = document.createElement("SPAN");
                 txt.innerHTML = "phone number is required";
                 if (document.forms['carform']['phonenumber'].nextSibling == null) {
-
                     document.forms['carform']['phonenumber'].parentNode.appendChild(txt);
+                    document.forms['carform']['phonenumber'].style.border="1px solid red";
+
                 }
             }
             else {
 
                 if (document.forms['carform']['phonenumber'].nextSibling !== null) {
                     document.forms['carform']['phonenumber'].nextSibling.remove();
+                    document.forms['carform']['phonenumber'].style.border="1px solid black";
+
                 }
             }
             if (!regEmail.test(em)) {
                 let txt = document.createElement("SPAN");
                 txt.innerHTML = "email is required";
                 if (document.forms['carform']['email'].nextSibling == null) {
-
                     document.forms['carform']['email'].parentNode.appendChild(txt);
+                    document.forms['carform']['email'].style.border="1px solid red";
+
                 }
             }
             else {
 
                 if (document.forms['carform']['email'].nextSibling !== null) {
                     document.forms['carform']['email'].nextSibling.remove();
+                    document.forms['carform']['email'].style.border="1px solid black";
+
                 }
             }
             if (arr_age.length == 0) {
@@ -151,9 +160,9 @@
                 if(document.getElementById("agespan")==null){
                 //let checkboxes_age = document.querySelectorAll("input[name='age']:checked");
                 document.querySelector("input[name='age']").parentNode.appendChild(txt);
+
             }
         }
-
             else {
                 if(document.getElementById("agespan")!==null){
                     document.getElementById("agespan").remove();
@@ -165,17 +174,15 @@
                 txt.innerHTML = "vehicle name is required";
                 txt.setAttribute('id', 'vehiclespan');
                 if(document.getElementById("vehiclespan")==null){
-                //let checkboxes_age = document.querySelectorAll("input[name='age']:checked");
                 document.querySelector("input[name='vehicle']").parentNode.appendChild(txt);
+
             }
         }
             else {
                 if(document.getElementById("vehiclespan")!==null){
                     document.getElementById("vehiclespan").remove();
                 }
-
             }
-
             event.preventDefault();
         }
     </script>
