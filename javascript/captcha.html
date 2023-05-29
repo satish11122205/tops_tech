@@ -21,7 +21,8 @@
             width: 30px;
             height: 30px;
             bottom: 45px;
-            background-image: url(rpt.jpg);
+            background-image:url(../images/refresh.png);
+            background-size: contain;
         }
         #txtInput,
         #Button1 {
@@ -47,7 +48,7 @@
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             // Generate captcha for length of
             // 5 with random character
-            for (let i = 1; i < 5; i++) {
+            for (let i = 1; i < 6; i++) {
                 autoInput += chardata.charAt(
                     Math.random() * chardata.length)
             }
@@ -70,5 +71,5 @@
         }
     </script>
 </body>
-
+ 
 </html>
