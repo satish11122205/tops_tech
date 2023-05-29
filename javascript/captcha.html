@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8" />
     <title>title</title>
@@ -9,16 +8,13 @@
             background-color: grey;
             width: 300px;
             height: 100px;
-
         }
-
         #mainCaptcha {
             position: relative;
             left: 60px;
             top: 5px;
 
         }
-
         #refresh {
             position: relative;
             left: 230px;
@@ -27,7 +23,6 @@
             bottom: 45px;
             background-image: url(rpt.jpg);
         }
-
         #txtInput,
         #Button1 {
             position: relative;
@@ -39,46 +34,39 @@
 <body onload="Captcha();">
     <div class="capt">
         <h2 type="text" id="mainCaptcha"></h2>
-        <p><input type="button" id="refresh" onclick="Captcha();" /></p> 
+        <p><input type="button" id="refresh" onclick="Captcha();" /></p>
         <input type="text" id="txtInput" />
         <input id="Button1" type="button" value="Check" onclick="ValidCaptcha()" />
         <p id="result"></p>
     </div>
     <script>
         function Captcha() {
-            document.getElementById('txtInput').value="";
-            var alpha = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
-            var i;
-            for (i = 0; i < 6; i++) {
-                var a = alpha[Math.floor(Math.random() * alpha.length)];
-                var b = alpha[Math.floor(Math.random() * alpha.length)];
-                var c = alpha[Math.floor(Math.random() * alpha.length)];
-                var d = alpha[Math.floor(Math.random() * alpha.length)];
-                var e = alpha[Math.floor(Math.random() * alpha.length)];
-                var f = alpha[Math.floor(Math.random() * alpha.length)];
-                var g = alpha[Math.floor(Math.random() * alpha.length)];
+            document.getElementById('txtInput').value = "";
+            let autoInput = "";
+            let chardata =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            // Generate captcha for length of
+            // 5 with random character
+            for (let i = 1; i < 5; i++) {
+                autoInput += chardata.charAt(
+                    Math.random() * chardata.length)
             }
-            var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' ' + f + ' ' + g;
-            document.getElementById("mainCaptcha").innerHTML = code
-            document.getElementById("mainCaptcha").value = code
+            document.getElementById("mainCaptcha").innerHTML = autoInput
+            document.getElementById("result").innerHTML = "";
         }
         function ValidCaptcha() {
-            var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
-            var string2 = removeSpaces(document.getElementById('txtInput').value);
-            if (string1 == string2) {
-            document.getElementById("result").innerHTML = "Matched";
-            ValidCaptcha();
+            let x = document.getElementById("mainCaptcha").innerHTML;
+
+            let userinput = document.getElementById('txtInput').value;
+            if (userinput == x) {
+                document.getElementById("result").innerHTML = "Matched";
+                ValidCaptcha();
                 return true;
             } else {
                 document.getElementById("result").innerHTML = "Not Matched";
                 ValidCaptcha();
                 return false;
             }
-        }
-        function removeSpaces(string) {
-            return string.split(' ').join('');
         }
     </script>
 </body>
