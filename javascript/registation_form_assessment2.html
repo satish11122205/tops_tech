@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <style>
+        input[type=text]:focus {
+            border: 3px solid #079229;
+            background-color: aquamarine;
+        }
+        span{
+        color:red;
+      }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form  name="registration" onsubmit="validateform()">
+        <table>
+            <tbody>
+                <tr>
+                    <td><label>First Name:</label></td>
+                    <td><input type="text" name="firstname" minlength="3" maxlength="6"/></td>
+                </tr>
+                <tr>
+                    <td><label>Last Name:</label></td>
+                    <td><input type="text" name="lastname" minlength="3" maxlength="6" /></td>
+                </tr>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="text" name="email" /></td>
+            </tr>
+                <tr>
+                    <td><label>Mobile:</label></td>
+                    <td><input type="text" name="phonenumber" /></td>
+               
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" value="m" name="gender" />male 
+                        <input value="f" type="radio" name="gender" />female
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Date of birth:</label></td>
+                    <td><input id="date" type="date" name="dob" value="" /></td>
+                </tr>
+                <tr>
+                    <td><label>Text area:</label></td>
+                    <td><textarea name="txt"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>city:</label></td>
+                    <td><input type="text" name="city" value="" /></td>
+                </tr>
+                <tr>
+                    <td><label>Area PIN:</label></td>
+                    <td><input type="text" name="pin" /></td>
+                </tr>
+                <tr>
+                    <td><label>State:</label></td>
+                    <td><input type="text" name="state" /></td>
+                </tr>
+                <tr>
+                <td><label>Qualification:</label></td>
+                <td>
+                    <select name="qualif">
+                        <option value=""></option>
+
+                        <option value="bcom" name="qualif1">Bcom</option>
+                        <option value="Be" name="qualif1">Engineering</option>
+                        <option value="masters" name="qualif1">Masters</option>
+                    </select>
+                </td>
+            </tr>
+                <tr>
+                    <td><label>Specifications:</label></td>
+                    <td>
+                        <input type="checkbox" value="" name="specif" />select<br/>
+                        <input type="checkbox" value="cs" name="specif" />computer Science<br/>
+                        <input type="checkbox" value="info" name="specif" />Information technology<br/>
+                        <input type="checkbox" value="ca" name="specif" />Computer Architecture<br/>
+                        <input type="checkbox" value="tele" name="specif" />tele Communications<br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">Password:</label></td>
+                <td><input type="password" id="pwd" name="pwd" minlength="8" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="submit" /></td>
+                    <td><input type="reset" name="reset" value="reset" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script>
+        function validateform() {
+            event.preventDefault();
+
+            a = document.forms['registration']['firstname'].value;
+            b = document.forms['registration']['lastname'].value;
+            c = document.forms['registration']['phonenumber'].value;
+            em = document.forms['registration']['email'].value;
+            g = document.forms['registration']['gender'].value;
+            date = document.forms['registration']['dob'].value;  
+            t = document.forms['registration']['txt'].value;  
+            city = document.forms['registration']['city'].value;  
+            pin = document.forms['registration']['pin'].value;  
+            state = document.forms['registration']['state'].value;  
+            specif = document.forms['registration']['specif'].value;  
+            qualif = document.forms['registration']['qualif'].value;  
+            pwd = document.forms['registration']['pwd'].value;  
+            let arr_specif = [];
+            let checkboxes_specif = document.querySelectorAll("input[name='specif']:checked");
+            for (let i = 0; i < checkboxes_specif.length; i++) {
+                arr_specif.push(checkboxes_specif[i].value);
+                arr_specif.toString();
+            }
+            let regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+            let regPhone = /^\d{10}$/;
+            let regName = /\d+$/g;
+            if (a == "" || regName.test(a)) {
+                window.alert("Please enter first name properly");
+                document.forms['registration']['firstname'].focus();
+                return false; 
+            }
+            if (b == "" || regName.test(b)) {
+                window.alert("Please enter last name properly");
+                document.forms['registration']['lastname'].focus();
+              return false;               
+            }
+            if (em == "" || !regEmail.test(em)) {
+                window.alert("Please enter a valid e-mail address.");
+                document.forms['registration']['email'].focus();    
+                 return false;                
+            }
+            if (c == "" || !regPhone.test(c)) {
+                window.alert("Please enter a valid phone number.");
+                document.forms['registration']['phonenumber'].focus();
+                return false;                
+            }
+           
+            if (g == "") {
+                window.alert("Please select your gender");
+                document.forms['registration']['gender'].focus();    
+                return false;               
+            }    
+            if (date == "") {
+                window.alert("Please enter dob");
+                document.forms['registration']['date'].focus();    
+                return false; 
+            }   
+            if (t == "") {
+                window.alert("Please enter text");
+                document.forms['registration']['text'].focus();    
+                return false; 
+            }  
+            if (city == "") {
+                window.alert("Please enter city");
+                document.forms['registration']['city'].focus();    
+                return false; 
+            }  
+            if (pin == "") {
+                window.alert("Please enter pin");
+                document.forms['registration']['pin'].focus();    
+                return false; 
+            } 
+           if (state == "") {
+                window.alert("Please enter state");
+                document.forms['registration']['state'].focus();    
+                return false; 
+            }  
+            if (qualif.selectedIndex == -1) {
+                window.alert("Please select Qualification");
+                document.forms['registration']['qualif'].focus();    
+                return false;
+            }         
+            if(arr_specif.length==0){
+                window.alert("Please enter specifications");
+                document.forms['registration']['specif'].focus();    
+                return false; 
+            }
+            if (pwd == "") {
+                window.alert("Please enter passward");
+                document.forms['registration']['pwd'].focus();    
+                return false; 
+            }
+         return true;
+        }
+    </script>
+</body>
+
+</html>

@@ -9,14 +9,15 @@
         let quote_array = ["Change the world by being yourself.", "Every moment is a fresh beginning.", "When nothing goes right, go left.", "Success is the child of audacity."];
         let index = 0;
         function slide() {
-            //let quote_rendom= quote_array[Math.floor(Math.random()*quote_array.length)]; //rendom quote index print
-            //document.getElementById("quote").innerHTML = quote_rendom;
-            document.getElementById("quote").innerHTML = quote_array[index];
-
-            index++;
+        
             if (index >= quote_array.length) {
                 index = 0;
             }
+            //  let quote_rendom= quote_array[Math.floor(Math.random()*quote_array.length)]; //rendom quote index print
+           // document.getElementById("quote").innerHTML = quote_rendom;
+         document.getElementById("quote").innerHTML = quote_array[index];
+         index++;
+
         }
         setInterval("slide()", 2000);
     </script>

@@ -9,9 +9,10 @@
             border: 3px solid #079229;
             background-color: aquamarine;
         }
-        span{
-        color:red;
-      }
+
+        span {
+            color: red;
+        }
     </style>
 </head>
 
@@ -32,28 +33,25 @@
                 <tr>
                     <td><label>phone number</label></td>
                     <td><input type="text" name="phonenumber" /></td>
-
-
                 </tr>
                 <tr>
                     <td><label>email address</label></td>
                     <td><input type="text" name="email" /></td>
-
-
                 </tr>
-                <td><label>age range</label></td>
-
-                <td>
-                    <input type="checkbox" value="a1" name="age" />21-29 <input value="a2" type="checkbox"
-                        name="age" />30-39
-                    <input value="a3" type="checkbox" name="age" />40-49<input value="a4" type="checkbox"
-                        name="age" />above50
-                </td>
+                <tr>
+                     <td><label>age range</label></td>
+                      <td>
+                        <input type="checkbox" value="a1" name="age" />21-29 <input value="a2" type="checkbox"
+                            name="age" />30-39
+                        <input value="a3" type="checkbox" name="age" />40-49<input value="a4" type="checkbox"
+                            name="age" />above50
+                      </td>
+                </tr>
                 <tr>
                     <td><label>select car to drive</label></td>
 
-                    <td><input type="checkbox" value="b1" name="vehicle" />teslaModely <input value="b2" type="checkbox"
-                            name="vehicle" />teslaModelx
+                    <td><input type="checkbox" value="b1" name="vehicle" />teslaModely<br/>
+                         <input value="b2" type="checkbox" name="vehicle" />teslaModelx<br/>
                         <input value="b3" type="checkbox" name="vehicle" />teslaModelz
                     </td>
                 </tr>
@@ -84,22 +82,23 @@
             for (let i = 0; i < checkboxes_vehicle.length; i++) {
                 arr_vehicle.push(checkboxes_vehicle[i].value);
                 arr_vehicle.toString()
+
             }
-            var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
-            var regPhone = /^\d{10}$/;
-            var regName = /\d+$/g;
+            let regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+            let regPhone = /^\d{10}$/;
+            let regName = /\d+$/g;
             if (a == "" || regName.test(a)) {
                 let txt = document.createElement("SPAN");
                 txt.innerHTML = "first name is required";
                 if (document.forms['carform']['firstname'].nextSibling == null) {
                     document.forms['carform']['firstname'].parentNode.appendChild(txt);
-                    document.forms['carform']['firstname'].style.border="1px solid red";
+                    document.forms['carform']['firstname'].style.border = "1px solid red";
                 }
             }
             else {
                 if (document.forms['carform']['firstname'].nextSibling !== null) {
                     document.forms['carform']['firstname'].nextSibling.remove();
-                    document.forms['carform']['firstname'].style.border="1px solid black";
+                    document.forms['carform']['firstname'].style.border = "1px solid black";
 
                 }
             }
@@ -108,14 +107,14 @@
                 txt.innerHTML = "last name is required";
                 if (document.forms['carform']['lastname'].nextSibling == null) {
                     document.forms['carform']['lastname'].parentNode.appendChild(txt);
-                    document.forms['carform']['lastname'].style.border="1px solid red";
+                    document.forms['carform']['lastname'].style.border = "1px solid red";
 
                 }
             }
             else {
                 if (document.forms['carform']['lastname'].nextSibling !== null) {
                     document.forms['carform']['lastname'].nextSibling.remove();
-                    document.forms['carform']['lastname'].style.border="1px solid black";
+                    document.forms['carform']['lastname'].style.border = "1px solid black";
 
                 }
             }
@@ -124,7 +123,7 @@
                 txt.innerHTML = "phone number is required";
                 if (document.forms['carform']['phonenumber'].nextSibling == null) {
                     document.forms['carform']['phonenumber'].parentNode.appendChild(txt);
-                    document.forms['carform']['phonenumber'].style.border="1px solid red";
+                    document.forms['carform']['phonenumber'].style.border = "1px solid red";
 
                 }
             }
@@ -132,7 +131,7 @@
 
                 if (document.forms['carform']['phonenumber'].nextSibling !== null) {
                     document.forms['carform']['phonenumber'].nextSibling.remove();
-                    document.forms['carform']['phonenumber'].style.border="1px solid black";
+                    document.forms['carform']['phonenumber'].style.border = "1px solid black";
 
                 }
             }
@@ -141,7 +140,7 @@
                 txt.innerHTML = "email is required";
                 if (document.forms['carform']['email'].nextSibling == null) {
                     document.forms['carform']['email'].parentNode.appendChild(txt);
-                    document.forms['carform']['email'].style.border="1px solid red";
+                    document.forms['carform']['email'].style.border = "1px solid red";
 
                 }
             }
@@ -149,7 +148,7 @@
 
                 if (document.forms['carform']['email'].nextSibling !== null) {
                     document.forms['carform']['email'].nextSibling.remove();
-                    document.forms['carform']['email'].style.border="1px solid black";
+                    document.forms['carform']['email'].style.border = "1px solid black";
 
                 }
             }
@@ -157,14 +156,14 @@
                 let txt = document.createElement("SPAN");
                 txt.innerHTML = "age is required";
                 txt.setAttribute('id', 'agespan');
-                if(document.getElementById("agespan")==null){
-                //let checkboxes_age = document.querySelectorAll("input[name='age']:checked");
-                document.querySelector("input[name='age']").parentNode.appendChild(txt);
+                if (document.getElementById("agespan") == null) {
+                    //let checkboxes_age = document.querySelectorAll("input[name='age']:checked");
+                    document.querySelector("input[name='age']").parentNode.appendChild(txt);
 
+                }
             }
-        }
             else {
-                if(document.getElementById("agespan")!==null){
+                if (document.getElementById("agespan") !== null) {
                     document.getElementById("agespan").remove();
                 }
 
@@ -173,13 +172,13 @@
                 let txt = document.createElement("SPAN");
                 txt.innerHTML = "vehicle name is required";
                 txt.setAttribute('id', 'vehiclespan');
-                if(document.getElementById("vehiclespan")==null){
-                document.querySelector("input[name='vehicle']").parentNode.appendChild(txt);
+                if (document.getElementById("vehiclespan") == null) {
+                    document.querySelector("input[name='vehicle']").parentNode.appendChild(txt);
 
+                }
             }
-        }
             else {
-                if(document.getElementById("vehiclespan")!==null){
+                if (document.getElementById("vehiclespan") !== null) {
                     document.getElementById("vehiclespan").remove();
                 }
             }

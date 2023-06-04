@@ -49,8 +49,7 @@
             // Generate captcha for length of
             // 5 with random character
             for (let i = 1; i < 6; i++) {
-                autoInput += chardata.charAt(
-                    Math.random() * chardata.length)
+                autoInput += chardata.charAt(Math.random() * chardata.length)
             }
             document.getElementById("mainCaptcha").innerHTML = autoInput
             document.getElementById("result").innerHTML = "";
