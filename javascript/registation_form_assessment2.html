@@ -63,17 +63,16 @@
                     <td><input type="text" name="state" /></td>
                 </tr>
                 <tr>
-                <td><label>Qualification:</label></td>
-                <td>
-                    <select name="qualif">
-                        <option value="">select</option>
-
-                        <option value="bcom" name="qualif1">Bcom</option>
-                        <option value="Be" name="qualif1">Engineering</option>
-                        <option value="masters" name="qualif1">Masters</option>
-                    </select>
-                </td>
-            </tr>
+                    <td><label>Qualification:</label></td>
+                    <td>
+                        <select name="qualif">
+                           <option value="">select</option>
+                           <option value="bcom" name="qualif1">Bcom</option>
+                           <option value="Be" name="qualif1">Engineering</option>
+                           <option value="masters" name="qualif1">Masters</option>
+                        </select>
+                    </td>
+                </tr>
                 <tr>
                     <td><label>Specifications:</label></td>
                     <td>
@@ -85,7 +84,7 @@
                 </tr>
                 <tr>
                     <td><label for="pwd">Password:</label></td>
-                <td><input type="password" id="pwd" name="pwd" minlength="8" /></td>
+                    <td><input type="password" id="pwd" name="pwd"/></td>
                 </tr>
                 <tr>
                     <td><input type="submit" name="submit" value="submit" /></td>
@@ -140,15 +139,12 @@
                 document.forms['registration']['phonenumber'].focus();
                 return false;                
             }
-           
             if (g == "") {
                 window.alert("Please select your gender");
-                document.forms['registration']['gender'].focus();    
                 return false;               
             }    
             if (date == "") {
                 window.alert("Please enter dob");
-                document.forms['registration']['date'].focus();    
                 return false; 
             }   
             if (t == "") {
@@ -173,16 +169,14 @@
             }  
             if (qualif.selectedIndex == -1) {
                 window.alert("Please select Qualification");
-                document.forms['registration']['qualif'].focus();    
                 return false;
             }         
             if(arr_specif.length==0){
                 window.alert("Please enter specifications");
-                document.forms['registration']['specif'].focus();    
                 return false; 
             }
-            if (pwd == "") {
-                window.alert("Please enter passward");
+            if (pwd == "" || pwd.length <6) {
+                window.alert("Please entervalid password with min 6 characterd.");
                 document.forms['registration']['pwd'].focus();    
                 return false; 
             }
