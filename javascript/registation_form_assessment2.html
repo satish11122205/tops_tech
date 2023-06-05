@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>title</title>
     <style>
-        input[type=text]:focus {
+        input[type=text]:focus, input[type=password]:focus {
             border: 3px solid #079229;
             background-color: aquamarine;
         }
@@ -51,7 +51,7 @@
                     <td><textarea name="txt"></textarea></td>
                 </tr>
                 <tr>
-                    <td><label>city:</label></td>
+                    <td><label>City:</label></td>
                     <td><input type="text" name="city" value="" /></td>
                 </tr>
                 <tr>
@@ -66,7 +66,7 @@
                 <td><label>Qualification:</label></td>
                 <td>
                     <select name="qualif">
-                        <option value=""></option>
+                        <option value="">select</option>
 
                         <option value="bcom" name="qualif1">Bcom</option>
                         <option value="Be" name="qualif1">Engineering</option>
@@ -77,7 +77,6 @@
                 <tr>
                     <td><label>Specifications:</label></td>
                     <td>
-                        <input type="checkbox" value="" name="specif" />select<br/>
                         <input type="checkbox" value="cs" name="specif" />computer Science<br/>
                         <input type="checkbox" value="info" name="specif" />Information technology<br/>
                         <input type="checkbox" value="ca" name="specif" />Computer Architecture<br/>
@@ -99,19 +98,19 @@
         function validateform() {
             event.preventDefault();
 
-            a = document.forms['registration']['firstname'].value;
-            b = document.forms['registration']['lastname'].value;
-            c = document.forms['registration']['phonenumber'].value;
-            em = document.forms['registration']['email'].value;
-            g = document.forms['registration']['gender'].value;
-            date = document.forms['registration']['dob'].value;  
-            t = document.forms['registration']['txt'].value;  
-            city = document.forms['registration']['city'].value;  
-            pin = document.forms['registration']['pin'].value;  
-            state = document.forms['registration']['state'].value;  
-            specif = document.forms['registration']['specif'].value;  
-            qualif = document.forms['registration']['qualif'].value;  
-            pwd = document.forms['registration']['pwd'].value;  
+          let  a = document.forms['registration']['firstname'].value;
+          let   b = document.forms['registration']['lastname'].value;
+          let   c = document.forms['registration']['phonenumber'].value;
+          let  em = document.forms['registration']['email'].value;
+          let  g = document.forms['registration']['gender'].value;
+          let  date = document.forms['registration']['dob'].value;  
+          let  t = document.forms['registration']['txt'].value;  
+          let  city = document.forms['registration']['city'].value;  
+          let  pin = document.forms['registration']['pin'].value;  
+          let  state = document.forms['registration']['state'].value;  
+          let  specif = document.forms['registration']['specif'].value;  
+          let  qualif = document.forms['registration']['qualif'].value;  
+          let  pwd = document.forms['registration']['pwd'].value;  
             let arr_specif = [];
             let checkboxes_specif = document.querySelectorAll("input[name='specif']:checked");
             for (let i = 0; i < checkboxes_specif.length; i++) {
