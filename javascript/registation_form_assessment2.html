@@ -65,8 +65,7 @@
                 <tr>
                     <td><label>Qualification:</label></td>
                     <td>
-                        <select name="qualif">
-                           <option value="">select</option>
+                        <select type="text" value="" name="qualif">
                            <option value="bcom" name="qualif1">Bcom</option>
                            <option value="Be" name="qualif1">Engineering</option>
                            <option value="masters" name="qualif1">Masters</option>
@@ -107,8 +106,6 @@
           let  city = document.forms['registration']['city'].value;  
           let  pin = document.forms['registration']['pin'].value;  
           let  state = document.forms['registration']['state'].value;  
-          let  specif = document.forms['registration']['specif'].value;  
-          let  qualif = document.forms['registration']['qualif'].value;  
           let  pwd = document.forms['registration']['pwd'].value;  
             let arr_specif = [];
             let checkboxes_specif = document.querySelectorAll("input[name='specif']:checked");
@@ -167,7 +164,7 @@
                 document.forms['registration']['state'].focus();    
                 return false; 
             }  
-            if (qualif.selectedIndex == -1) {
+            if (document.forms['registration']['qualif'].selectedIndex == -1) {
                 window.alert("Please select Qualification");
                 return false;
             }         
