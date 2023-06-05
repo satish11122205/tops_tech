@@ -52,7 +52,7 @@
                 </tr>
                 <tr>
                     <td><label>City:</label></td>
-                    <td><input type="text" name="city" value="" /></td>
+                    <td><input type="text" name="city" value=""/></td>
                 </tr>
                 <tr>
                     <td><label>Area PIN:</label></td>
@@ -146,7 +146,7 @@
             }   
             if (t == "") {
                 window.alert("Please enter text");
-                document.forms['registration']['text'].focus();    
+                document.forms['registration']['txt'].focus();    
                 return false; 
             }  
             if (city == "") {
